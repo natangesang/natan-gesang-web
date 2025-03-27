@@ -113,8 +113,8 @@ const NavLinks = ({ mobile = false, onClick }: NavLinksProps) => {
           href={link.href}
           className={cn(
             mobile
-              ? 'text-xl font-medium py-2'
-              : 'font-medium text-gray-800 hover:text-natan-blue transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-natan-blue after:origin-right after:scale-x-0 after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100'
+              ? 'text-xl font-medium py-2 text-gray-800'
+              : 'font-medium text-white hover:text-natan-orange transition-colors duration-300 relative drop-shadow-md after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-natan-orange after:origin-right after:scale-x-0 after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100'
           )}
           onClick={onClick}
         >
