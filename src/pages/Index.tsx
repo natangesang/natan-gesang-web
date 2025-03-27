@@ -1,12 +1,36 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useEffect } from 'react';
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import EducationalValues from '@/components/EducationalValues';
+import EducationalLevels from '@/components/EducationalLevels';
+import TechnologySection from '@/components/TechnologySection';
+import Gallery from '@/components/Gallery';
+import ContactSection from '@/components/ContactSection';
+import Footer from '@/components/Footer';
+import WhatsAppButton from '@/components/WhatsAppButton';
+import ScrollToTop from '@/components/ui/scroll-to-top';
 
 const Index = () => {
+  useEffect(() => {
+    // Update document title
+    document.title = 'Natan Gesang - Escuela Internacional';
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="relative">
+      <Navbar />
+      <main>
+        <Hero />
+        <EducationalValues />
+        <EducationalLevels />
+        <TechnologySection />
+        <Gallery />
+        <ContactSection />
+      </main>
+      <Footer />
+      <WhatsAppButton />
+      <ScrollToTop />
     </div>
   );
 };
