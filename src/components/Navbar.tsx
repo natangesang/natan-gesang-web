@@ -47,7 +47,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <NavLinks />
+          <NavLinks scrolled={scrolled} />
           <a
             href="https://wa.me/5491151084063"
             target="_blank"
@@ -92,10 +92,11 @@ const Navbar = () => {
 
 interface NavLinksProps {
   mobile?: boolean;
+  scrolled?: boolean;
   onClick?: () => void;
 }
 
-const NavLinks = ({ mobile = false, onClick }: NavLinksProps) => {
+const NavLinks = ({ mobile = false, scrolled = false, onClick }: NavLinksProps) => {
   const navLinks = [
     { href: '#inicio', label: 'Inicio' },
     { href: '#propuesta', label: 'Propuesta Educativa' },
@@ -114,7 +115,10 @@ const NavLinks = ({ mobile = false, onClick }: NavLinksProps) => {
           className={cn(
             mobile
               ? 'text-xl font-medium py-2 text-gray-800'
-              : 'font-medium text-white hover:text-natan-orange transition-colors duration-300 relative drop-shadow-md after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-natan-orange after:origin-right after:scale-x-0 after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100'
+              : 'font-medium transition-colors duration-300 relative drop-shadow-md after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-natan-orange after:origin-right after:scale-x-0 after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100',
+              scrolled 
+                ? 'text-natan-blue hover:text-natan-orange' 
+                : 'text-white hover:text-natan-orange'
           )}
           onClick={onClick}
         >
