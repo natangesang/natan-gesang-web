@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Facebook, Instagram, Twitter, MapPin, Phone, Mail } from 'lucide-react';
 
@@ -12,7 +11,7 @@ const Footer = () => {
           <div>
             <div className="mb-5">
               <img
-                src="/public/lovable-uploads/5736a151-604b-4831-be6a-9d3fa1cd7c78.png"
+                src="/public/lovable-uploads/ec87831b-f2ae-4525-98d0-5e29f178d93c.png"
                 alt="Natan Gesang"
                 className="h-16 bg-white rounded-md p-1"
               />
