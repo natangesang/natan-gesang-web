@@ -48,14 +48,24 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <NavLinks scrolled={scrolled} />
-          <a
-            href="https://wa.me/5491151084063"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-accent"
-          >
-            Contáctanos
-          </a>
+          <div className="flex space-x-3">
+            <a
+              href="https://padres.natangesang.edu.ar"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-2 rounded bg-natan-blue text-white hover:bg-natan-blue/90 transition-colors"
+            >
+              Portal Padres
+            </a>
+            <a
+              href="https://classroom.natangesang.edu.ar"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-2 rounded bg-natan-orange text-white hover:bg-natan-orange/90 transition-colors"
+            >
+              Classroom
+            </a>
+          </div>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -76,15 +86,26 @@ const Navbar = () => {
         )}
       >
         <NavLinks mobile onClick={() => setIsOpen(false)} />
-        <a
-          href="https://wa.me/5491151084063"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-accent"
-          onClick={() => setIsOpen(false)}
-        >
-          Contáctanos
-        </a>
+        <div className="flex flex-col space-y-3">
+          <a
+            href="https://padres.natangesang.edu.ar"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 rounded bg-natan-blue text-white hover:bg-natan-blue/90 transition-colors text-center"
+            onClick={() => setIsOpen(false)}
+          >
+            Portal Padres
+          </a>
+          <a
+            href="https://classroom.natangesang.edu.ar"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 rounded bg-natan-orange text-white hover:bg-natan-orange/90 transition-colors text-center"
+            onClick={() => setIsOpen(false)}
+          >
+            Classroom
+          </a>
+        </div>
       </div>
     </header>
   );
@@ -102,6 +123,8 @@ const NavLinks = ({ mobile = false, scrolled = false, onClick }: NavLinksProps) 
     { href: '#institucional', label: 'Institucional' },
     { href: '#pilares', label: 'Pilares' },
     { href: '#niveles', label: 'Niveles' },
+    { href: '#templo', label: 'Templo' },
+    { href: '#novedades', label: 'Novedades' },
     { href: '#galeria', label: 'Galería' },
     { href: '#contacto', label: 'Contacto' },
   ];

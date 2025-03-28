@@ -68,7 +68,13 @@ export default {
           skyblue: "#4A90E2",
           lightblue: "#7FB6FF",
           orange: "#F07D3D",
-          lightorange: "#FFB380"
+          lightorange: "#FFB380",
+          pink: "#FF6B8B",
+          teal: "#00B2A9",
+          purple: "#8A65C9",
+          yellow: "#FFB81C",
+          coral: "#FF8A65",
+          mint: "#4DC295"
         },
       },
       borderRadius: {
@@ -108,6 +114,10 @@ export default {
         "pulse-light": {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.8" }
+        },
+        "shape-rotate": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" }
         }
       },
       animation: {
@@ -118,7 +128,8 @@ export default {
         "slide-in": "slide-in 0.6s ease-out forwards",
         "slide-in-right": "slide-in-right 0.6s ease-out forwards",
         "float": "float 4s ease-in-out infinite",
-        "pulse-light": "pulse-light 3s ease-in-out infinite"
+        "pulse-light": "pulse-light 3s ease-in-out infinite",
+        "shape-rotate": "shape-rotate 30s linear infinite"
       },
       boxShadow: {
         'natan': '0 10px 30px rgba(0, 87, 165, 0.1)',
