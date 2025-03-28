@@ -2,9 +2,9 @@
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import EducationalValues from '@/components/EducationalValues';
+import InstitucionalSection from '@/components/InstitucionalSection';
+import PilaresSection from '@/components/PilaresSection';
 import EducationalLevels from '@/components/EducationalLevels';
-import TechnologySection from '@/components/TechnologySection';
 import Gallery from '@/components/Gallery';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
@@ -22,9 +22,9 @@ const Index = () => {
       <Navbar />
       <main>
         <Hero />
-        <EducationalValues />
+        <InstitucionalSection />
+        <PilaresSection />
         <EducationalLevels />
-        <TechnologySection />
         <Gallery />
         <ContactSection />
       </main>

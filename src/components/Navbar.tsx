@@ -99,9 +99,9 @@ interface NavLinksProps {
 const NavLinks = ({ mobile = false, scrolled = false, onClick }: NavLinksProps) => {
   const navLinks = [
     { href: '#inicio', label: 'Inicio' },
-    { href: '#propuesta', label: 'Propuesta Educativa' },
+    { href: '#institucional', label: 'Institucional' },
+    { href: '#pilares', label: 'Pilares' },
     { href: '#niveles', label: 'Niveles' },
-    { href: '#tecnologia', label: 'Tecnología' },
     { href: '#galeria', label: 'Galería' },
     { href: '#contacto', label: 'Contacto' },
   ];

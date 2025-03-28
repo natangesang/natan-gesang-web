@@ -49,11 +49,11 @@ const EducationalLevels = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-natan-skyblue/90 to-natan-blue/90 z-10"></div>
             <img
               src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022"
-              alt="Jardín infantil"
+              alt="Nivel Inicial"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
             <div className="absolute inset-0 z-20 p-8 flex flex-col justify-end text-white">
-              <h3 className="font-heading text-2xl font-bold mb-3">Jardín de Infantes</h3>
+              <h3 className="font-heading text-2xl font-bold mb-3">Nivel Inicial</h3>
               <p className="mb-4 text-white/90">
                 Estimulamos la curiosidad y creatividad a través del juego, creando las bases para el aprendizaje futuro en un ambiente seguro y acogedor.
               </p>
@@ -71,6 +71,7 @@ const EducationalLevels = () => {
                   <span>Aproximación lúdica a la tecnología y ciencias</span>
                 </li>
               </ul>
+              <a href="#contacto" className="bg-white/20 hover:bg-white/30 transition-colors duration-300 text-white py-2 px-4 rounded inline-block">Más información</a>
             </div>
           </div>
 
@@ -81,11 +82,11 @@ const EducationalLevels = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-natan-orange/90 to-natan-lightorange/90 z-10"></div>
             <img
               src="https://images.unsplash.com/photo-1503676382389-4809596d5290?q=80&w=2016"
-              alt="Escuela primaria"
+              alt="Nivel Primario"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
             <div className="absolute inset-0 z-20 p-8 flex flex-col justify-end text-white">
-              <h3 className="font-heading text-2xl font-bold mb-3">Escuela Primaria</h3>
+              <h3 className="font-heading text-2xl font-bold mb-3">Nivel Primario</h3>
               <p className="mb-4 text-white/90">
                 Consolidamos conocimientos académicos mientras desarrollamos habilidades sociales, pensamiento crítico y autonomía en el aprendizaje.
               </p>
@@ -103,6 +104,7 @@ const EducationalLevels = () => {
                   <span>Proyectos tecnológicos y emprendedores prácticos</span>
                 </li>
               </ul>
+              <a href="#contacto" className="bg-white/20 hover:bg-white/30 transition-colors duration-300 text-white py-2 px-4 rounded inline-block">Más información</a>
             </div>
           </div>
         </div>
