@@ -38,11 +38,24 @@ const Hero = () => {
       id="inicio"
       className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-natan-blue to-natan-skyblue pt-24"
     >
+      {/* Formas geométricas decorativas */}
+      <div className="absolute top-1/4 left-10 w-24 h-24 bg-white/10 rounded-full animate-float"></div>
+      <div className="absolute bottom-1/3 right-10 w-32 h-32 bg-white/10 rotate-45 animate-float animate-delay-200"></div>
+      <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-white/10 rounded-full animate-float animate-delay-300"></div>
+
       <div className="absolute inset-0 bg-opacity-70 z-0">
-        <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=2070')] bg-cover bg-center opacity-20 mix-blend-overlay" />
+        <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022')] bg-cover bg-center opacity-20 mix-blend-overlay" />
       </div>
 
       <div className="container max-w-7xl mx-auto px-4 text-white z-10 py-24 md:py-32">
+        <div className="flex flex-col items-center mb-12">
+          <img
+            src="/lovable-uploads/ec87831b-f2ae-4525-98d0-5e29f178d93c.png"
+            alt="Natan Gesang"
+            className="h-32 md:h-40 mb-8 animate-float"
+          />
+        </div>
+        
         <div className="max-w-4xl mx-auto text-center">
           <h1
             ref={refs.heading}

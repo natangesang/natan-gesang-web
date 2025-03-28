@@ -25,14 +25,22 @@ const Index = () => {
       <Navbar />
       <main>
         <Hero />
-        <InstitucionalSection />
-        <PilaresSection />
-        <EducationalLevels />
-        <TemploSection />
-        <NewsSection />
-        <Gallery />
-        <AccessSection />
-        <ContactSection />
+        <div className="relative">
+          {/* Formas geométricas decorativas que se muestran a lo largo de toda la página */}
+          <div className="absolute top-[10%] left-0 w-32 h-32 bg-[#F3967B]/10 rounded-full -z-10"></div>
+          <div className="absolute top-[30%] right-0 w-64 h-64 bg-natan-skyblue/5 rotate-45 -z-10"></div>
+          <div className="absolute top-[50%] left-10 w-48 h-48 bg-natan-purple/5 rounded-full -z-10"></div>
+          <div className="absolute top-[70%] right-10 w-40 h-40 bg-[#F3967B]/10 rotate-12 -z-10"></div>
+          
+          <InstitucionalSection />
+          <PilaresSection />
+          <EducationalLevels />
+          <TemploSection />
+          <NewsSection />
+          <Gallery />
+          <AccessSection />
+          <ContactSection />
+        </div>
       </main>
       <Footer />
       <WhatsAppButton />

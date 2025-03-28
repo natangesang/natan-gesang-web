@@ -8,6 +8,8 @@ const AccessSection = () => {
       {/* Geometric decorations */}
       <div className="absolute top-0 left-0 w-40 h-40 bg-white opacity-5 rotate-45"></div>
       <div className="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-white opacity-5"></div>
+      <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-white opacity-5 rounded-full"></div>
+      <div className="absolute bottom-1/4 left-3/4 w-20 h-20 bg-white opacity-5 rotate-12"></div>
       
       <div className="container max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-10">
@@ -17,9 +19,9 @@ const AccessSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {/* Parents access */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1 border-t border-l border-white/20">
             <div className="flex items-center mb-4">
-              <div className="w-12 h-12 rounded-full bg-natan-orange flex items-center justify-center mr-4">
+              <div className="w-12 h-12 rounded-full bg-[#F3967B] flex items-center justify-center mr-4">
                 <Users size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-semibold">Portal de Padres</h3>
@@ -32,7 +34,7 @@ const AccessSection = () => {
               href="https://padres.natangesang.edu.ar" 
               target="_blank"
               rel="noopener noreferrer" 
-              className="inline-flex items-center font-medium text-natan-orange hover:text-natan-lightorange transition-colors"
+              className="inline-flex items-center font-medium text-[#F3967B] hover:text-white transition-colors"
             >
               Ingresar al portal
               <ArrowRight size={16} className="ml-2" />
@@ -40,7 +42,7 @@ const AccessSection = () => {
           </div>
           
           {/* Classroom access */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1 border-t border-l border-white/20">
             <div className="flex items-center mb-4">
               <div className="w-12 h-12 rounded-full bg-natan-skyblue flex items-center justify-center mr-4">
                 <BookOpen size={24} className="text-white" />
@@ -55,7 +57,7 @@ const AccessSection = () => {
               href="https://classroom.natangesang.edu.ar" 
               target="_blank"
               rel="noopener noreferrer" 
-              className="inline-flex items-center font-medium text-natan-skyblue hover:text-natan-lightblue transition-colors"
+              className="inline-flex items-center font-medium text-natan-skyblue hover:text-white transition-colors"
             >
               Ingresar a classroom
               <ArrowRight size={16} className="ml-2" />
