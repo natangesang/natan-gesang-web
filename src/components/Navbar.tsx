@@ -81,7 +81,7 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       <div
         className={cn(
-          'fixed inset-0 bg-white z-40 flex flex-col justify-center items-center space-y-8 p-4 transition-all duration-500 md:hidden',
+          'fixed inset-0 bg-natan-blue/95 z-40 flex flex-col justify-center items-center space-y-8 p-4 transition-all duration-500 md:hidden',
           isOpen ? 'opacity-100 top-0' : 'opacity-0 top-[-100%] pointer-events-none'
         )}
       >
@@ -91,7 +91,7 @@ const Navbar = () => {
             href="https://padres.natangesang.edu.ar"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 rounded bg-natan-blue text-white hover:bg-natan-blue/90 transition-colors text-center"
+            className="px-4 py-2 rounded bg-white text-natan-blue hover:bg-opacity-90 transition-colors text-center"
             onClick={() => setIsOpen(false)}
           >
             Portal Padres
@@ -100,7 +100,7 @@ const Navbar = () => {
             href="https://classroom.natangesang.edu.ar"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 rounded bg-natan-orange text-white hover:bg-natan-orange/90 transition-colors text-center"
+            className="px-4 py-2 rounded bg-natan-orange text-white hover:bg-opacity-90 transition-colors text-center"
             onClick={() => setIsOpen(false)}
           >
             Classroom
@@ -137,7 +137,7 @@ const NavLinks = ({ mobile = false, scrolled = false, onClick }: NavLinksProps) 
           href={link.href}
           className={cn(
             mobile
-              ? 'text-xl font-medium py-2 text-gray-800'
+              ? 'text-xl font-medium py-2 text-white'
               : 'font-medium transition-colors duration-300 relative drop-shadow-md after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-natan-orange after:origin-right after:scale-x-0 after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100',
               scrolled 
                 ? 'text-natan-blue hover:text-natan-orange' 
