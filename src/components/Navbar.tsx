@@ -41,7 +41,7 @@ const Navbar = () => {
           <img
             src="/lovable-uploads/ec87831b-f2ae-4525-98d0-5e29f178d93c.png"
             alt="Natan Gesang"
-            className="h-14"
+            className="h-20" // Changed from h-14 to h-20 to make the logo bigger
           />
         </a>
 
