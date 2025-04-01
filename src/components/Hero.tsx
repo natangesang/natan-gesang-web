@@ -1,11 +1,14 @@
+
 import React, { useEffect, useRef } from 'react';
 import { ChevronDown } from 'lucide-react';
+
 const Hero = () => {
   const refs = {
     heading: useRef<HTMLHeadingElement>(null),
     subheading: useRef<HTMLParagraphElement>(null),
     button: useRef<HTMLAnchorElement>(null)
   };
+
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -17,15 +20,18 @@ const Hero = () => {
     }, {
       threshold: 0.1
     });
+
     if (refs.heading.current) observer.observe(refs.heading.current);
     if (refs.subheading.current) observer.observe(refs.subheading.current);
     if (refs.button.current) observer.observe(refs.button.current);
+
     return () => {
       if (refs.heading.current) observer.unobserve(refs.heading.current);
       if (refs.subheading.current) observer.unobserve(refs.subheading.current);
       if (refs.button.current) observer.unobserve(refs.button.current);
     };
   }, []);
+
   return <section id="inicio" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-natan-blue to-natan-skyblue pt-24">
       {/* Formas geométricas decorativas */}
       <div className="absolute top-1/4 left-10 w-24 h-24 bg-white/10 rounded-full animate-float"></div>
@@ -43,9 +49,9 @@ const Hero = () => {
         
         <div className="max-w-4xl mx-auto text-center">
           <h1 ref={refs.heading} className="opacity-0 translate-y-10 transition-all duration-700 font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
-            Educación innovadora para{' '}
+            El mejor comienzo para{' '}
             <span className="bg-white text-natan-blue px-2 pb-1 rounded-md">
-              ciudadanos globales
+              un gran futuro
             </span>
           </h1>
 
@@ -68,4 +74,5 @@ const Hero = () => {
       <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
     </section>;
 };
+
 export default Hero;
