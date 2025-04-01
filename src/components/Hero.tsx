@@ -49,8 +49,9 @@ const Hero = () => {
         
         <div className="max-w-4xl mx-auto text-center">
           <h1 ref={refs.heading} className="opacity-0 translate-y-10 transition-all duration-700 font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
-            El mejor comienzo para{' '}
-            <span className="bg-white text-natan-blue px-2 pb-1 rounded-md">
+            El mejor comienzo para
+            <br />
+            <span className="bg-white text-natan-blue px-2 pb-1 rounded-md mt-2 inline-block">
               un gran futuro
             </span>
           </h1>
