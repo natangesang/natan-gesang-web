@@ -45,12 +45,14 @@ const InstitucionalSection = () => {
             <div className="space-y-4">
               <div className="glass-card p-4">
                 <h4 className="font-heading font-semibold text-natan-blue mb-2">Misión</h4>
-                <p className="text-gray-700">Formar ciudadanos globales con sólidas raíces en la tradición judía, preparados para los desafíos del futuro mediante una educación innovadora y de excelencia.</p>
+                <p className="text-gray-700">Educar, a partir de la cercanía y personalización logrando el éxito académico de cada estudiante, impartiendo un marco de sólidos valores y tradiciones judías vinculadas a nuestras raíces. Contribuyendo en la incorporación de diferentes recursos tecnológicos e innovadores que permitan la formación de niños y niñas emprendedores con la habilidad y criterio resolutivo para adaptarse a los escenarios que les presente el futuro de forma independiente.</p>
               </div>
               
               <div className="glass-card p-4">
                 <h4 className="font-heading font-semibold text-natan-blue mb-2">Visión</h4>
-                <p className="text-gray-700">Ser una institución educativa líder que combine tradición e innovación para formar líderes comprometidos con su comunidad y preparados para transformar el mundo.</p>
+                <p className="text-gray-700 text-left">La Institución será una comunidad abierta al cambio, dinamizadora de calidad educativa, dentro de un ambiente rico en valores y tradiciones del pueblo judío, convivencia, inclusión, formadora de personas emprendedoras, responsables y comprometidas con la cultura, la ciencia, la tecnología y la sustentabilidad, para generar los cambios sociales en el mundo del futuro:
+- La Escuela Internacional Natan Gesang desea ser reconocida como un centro cultural y de formación, referente en Argentina y en todo el mundo. 
+- Ofrecer una enseñanza integral con orientación trilingüe de calidad para la formación de niños y niñas emprendedores que puedan afrontar con éxito los nuevos paradigmas de la educación del siglo XXI.</p>
               </div>
             </div>
           </div>
