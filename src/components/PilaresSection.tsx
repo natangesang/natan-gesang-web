@@ -50,7 +50,7 @@ const PilaresSection = () => {
     {
       icon: <Star className="h-12 w-12 text-natan-blue" />,
       title: "Modo Gesang",
-      description: "Nuestra metodología única que combina la tradición con innovación para un aprendizaje más efectivo y significativo."
+      description: "Seguimos el modelo educativo Israelí, donde toda la enseñanza se dirige hacia la formación de emprendedores, científicos y profesionales de excelencia. Israel es considerado una Start Up Nation donde año a año se conforman nuevas empresas líderes a nivel mundial."
     },
     {
       icon: <BookOpen className="h-12 w-12 text-natan-blue" />,
