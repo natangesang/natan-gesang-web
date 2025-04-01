@@ -33,10 +33,27 @@ const Hero = () => {
   }, []);
 
   return <section id="inicio" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-natan-blue to-natan-skyblue pt-24">
-      {/* Formas geométricas decorativas */}
-      <div className="absolute top-1/4 left-10 w-24 h-24 bg-white/10 rounded-full animate-float"></div>
-      <div className="absolute bottom-1/3 right-10 w-32 h-32 bg-white/10 rotate-45 animate-float animate-delay-200"></div>
-      <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-white/10 rounded-full animate-float animate-delay-300"></div>
+      {/* Formas geométricas decorativas basadas en la imagen proporcionada */}
+      <div className="absolute top-[15%] left-[10%] w-16 h-32 bg-white/30 rounded-l-full"></div>
+      <div className="absolute top-[15%] left-[18%] w-16 h-32 bg-white/20 rounded-r-full"></div>
+      <div className="absolute top-[40%] right-[10%] w-24 h-24 bg-white/30 rounded-full"></div>
+      <div className="absolute bottom-[20%] left-[20%] w-32 h-16 bg-white/20 rounded-t-full"></div>
+      <div className="absolute top-[60%] right-[15%] w-32 h-16 bg-white/20 rounded-b-full"></div>
+      <div className="absolute top-[30%] left-[5%] w-16 h-16 bg-natan-teal/30 rounded-full"></div>
+      <div className="absolute bottom-[30%] right-[5%] w-16 h-16 bg-natan-pink/30 rounded-full"></div>
+      
+      {/* Cuadrados y rectángulos */}
+      <div className="absolute top-[20%] right-[20%] w-20 h-20 bg-natan-yellow/30"></div>
+      <div className="absolute bottom-[20%] left-[10%] w-16 h-32 bg-natan-coral/20"></div>
+      
+      {/* Líneas horizontales */}
+      <div className="absolute bottom-[15%] right-[25%] w-32 h-2 bg-white/30"></div>
+      <div className="absolute bottom-[12%] right-[25%] w-32 h-2 bg-white/30"></div>
+      <div className="absolute bottom-[9%] right-[25%] w-32 h-2 bg-white/30"></div>
+      
+      {/* Formas geométricas adicionales */}
+      <div className="absolute bottom-[10%] left-[30%] w-24 h-24 bg-white/10 rounded-bl-full"></div>
+      <div className="absolute top-[15%] right-[30%] w-16 h-16 border-2 border-white/30 rounded-tr-2xl"></div>
 
       <div className="absolute inset-0 bg-opacity-70 z-0">
         <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022')] bg-cover bg-center opacity-20 mix-blend-overlay" />

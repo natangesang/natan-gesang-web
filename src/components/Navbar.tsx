@@ -41,7 +41,7 @@ const Navbar = () => {
           <img
             src="/lovable-uploads/ec87831b-f2ae-4525-98d0-5e29f178d93c.png"
             alt="Natan Gesang"
-            className="h-20" // Changed from h-14 to h-20 to make the logo bigger
+            className="h-20"
           />
         </a>
 
@@ -74,24 +74,37 @@ const Navbar = () => {
           onClick={toggleMenu}
           aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
         >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+          {isOpen ? <X size={24} color={scrolled ? "#0057A5" : "#fff"} /> : <Menu size={24} color={scrolled ? "#0057A5" : "#fff"} />}
         </button>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Navigation with geometric shapes */}
       <div
         className={cn(
-          'fixed inset-0 bg-natan-blue/95 z-40 flex flex-col justify-center items-center space-y-8 p-4 transition-all duration-500 md:hidden',
+          'fixed inset-0 bg-white z-40 flex flex-col justify-center items-center space-y-8 p-4 transition-all duration-500 md:hidden',
           isOpen ? 'opacity-100 top-0' : 'opacity-0 top-[-100%] pointer-events-none'
         )}
       >
+        {/* Formas geométricas decorativas */}
+        <div className="absolute top-[10%] left-[10%] w-12 h-24 bg-natan-blue/10 rounded-l-full"></div>
+        <div className="absolute top-[20%] right-[10%] w-16 h-16 bg-natan-yellow/20 rounded-full"></div>
+        <div className="absolute bottom-[15%] left-[20%] w-20 h-10 bg-natan-pink/10 rounded-t-full"></div>
+        <div className="absolute bottom-[30%] right-[15%] w-24 h-12 bg-natan-teal/10 rounded-b-full"></div>
+        <div className="absolute top-[60%] left-[15%] w-12 h-12 bg-natan-purple/10"></div>
+        <div className="absolute top-[40%] right-[5%] w-8 h-32 bg-natan-skyblue/10"></div>
+        
+        {/* Líneas horizontales */}
+        <div className="absolute bottom-[10%] right-[25%] w-24 h-1 bg-natan-blue/20"></div>
+        <div className="absolute bottom-[8%] right-[25%] w-24 h-1 bg-natan-blue/20"></div>
+        <div className="absolute bottom-[6%] right-[25%] w-24 h-1 bg-natan-blue/20"></div>
+        
         <NavLinks mobile onClick={() => setIsOpen(false)} />
-        <div className="flex flex-col space-y-3">
+        <div className="flex flex-col space-y-3 relative z-10">
           <a
             href="https://padres.natangesang.edu.ar"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 rounded bg-white text-natan-blue hover:bg-opacity-90 transition-colors text-center"
+            className="px-4 py-2 rounded bg-natan-blue text-white hover:bg-opacity-90 transition-colors text-center"
             onClick={() => setIsOpen(false)}
           >
             Portal Padres
@@ -137,7 +150,7 @@ const NavLinks = ({ mobile = false, scrolled = false, onClick }: NavLinksProps) 
           href={link.href}
           className={cn(
             mobile
-              ? 'text-xl font-medium py-2 text-white'
+              ? 'text-xl font-medium py-2 text-natan-blue hover:text-natan-orange transition-colors'
               : 'font-medium transition-colors duration-300 relative drop-shadow-md after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-natan-orange after:origin-right after:scale-x-0 after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100',
               scrolled 
                 ? 'text-natan-blue hover:text-natan-orange' 

@@ -64,17 +64,17 @@ export default {
           ring: "hsl(var(--sidebar-ring))"
         },
         natan: {
-          blue: "#0057A5",
-          skyblue: "#4A90E2",
-          lightblue: "#7FB6FF",
-          orange: "#F07D3D",
-          lightorange: "#FFB380",
-          pink: "#FF6B8B",
-          teal: "#00B2A9",
-          purple: "#8A65C9",
-          yellow: "#FFB81C",
-          coral: "#FF8A65",
-          mint: "#4DC295"
+          blue: "#0057A5",        // Azul principal - mantiene el color original
+          skyblue: "#4A90E2",     // Celeste - mantiene el color original
+          lightblue: "#7FB6FF",   // Celeste más claro
+          orange: "#F07D3D",      // Anaranjado - mantiene el color original
+          lightorange: "#FFB380", 
+          pink: "#FF6B8B",        // Rosa - nuevo del pantón
+          teal: "#00B2A9",        // Verde agua - nuevo del pantón
+          purple: "#8A65C9",      // Púrpura - nuevo del pantón
+          yellow: "#FFB81C",      // Amarillo - nuevo del pantón
+          coral: "#FF8A65",       // Coral - nuevo del pantón
+          mint: "#4DC295"         // Verde menta - nuevo del pantón
         },
       },
       borderRadius: {
