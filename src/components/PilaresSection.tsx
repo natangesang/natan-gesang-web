@@ -1,15 +1,6 @@
 
 import React, { useEffect, useRef, useState } from 'react';
-import { 
-  Code, 
-  BookOpen, 
-  Globe, 
-  GraduationCap,
-  DollarSign, 
-  HeartHandshake,
-  ChevronDown,
-  ChevronUp
-} from 'lucide-react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const PilaresSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -49,32 +40,76 @@ const PilaresSection = () => {
 
   const pilares = [
     {
-      icon: <Code className="h-12 w-12 text-natan-blue" />,
-      title: "Tecnología e Innovación",
-      description: "En tecnología, robótica y programación nos proponemos acompañar a nuestros estudiantes para que puedan idear soluciones creativas a través de \"Aprender haciendo\" en nuestro TecnoLab con equipamiento de avanzada."
-    },
-    {
-      icon: <BookOpen className="h-12 w-12 text-natan-blue" />,
+      icon: (
+        <div className="w-16 h-16 bg-pink-500 rounded-lg flex items-center justify-center">
+          <div className="w-8 h-10 bg-white rounded-sm relative">
+            <div className="absolute top-1 left-1 w-6 h-2 bg-pink-500 rounded-sm"></div>
+            <div className="absolute bottom-1 left-1 w-4 h-4 bg-pink-500 rounded-sm"></div>
+          </div>
+        </div>
+      ),
       title: "Proyecto Educativo",
       description: "Acompañamos de manera personalizada a cada alumno, brindándole la posibilidad de un constante crecimiento, en un entorno cálido y con desafíos que estimulen el deseo de seguir aprendiendo, una educación bilingüe y de calidad, junto a las herramientas tecnológicas necesarias para su futuro."
     },
     {
-      icon: <GraduationCap className="h-12 w-12 text-natan-blue" />,
+      icon: (
+        <div className="w-16 h-16 bg-teal-500 rounded-lg flex items-center justify-center">
+          <div className="w-10 h-8 bg-white rounded relative">
+            <div className="absolute top-1 left-2 w-6 h-2 bg-teal-500"></div>
+            <div className="absolute top-1 right-1 w-2 h-6 bg-teal-500 rounded-full"></div>
+          </div>
+        </div>
+      ),
       title: "Excelencia Académica",
       description: "Nuestros alumnos desarrollan al máximo sus potencialidades, favoreciendo la construcción de competencias que permitan el acceso crítico y reflexivo al conocimiento, celebrando cada logro alcanzado."
     },
     {
-      icon: <Globe className="h-12 w-12 text-natan-blue" />,
+      icon: (
+        <div className="w-16 h-16 bg-purple-500 rounded-lg flex items-center justify-center">
+          <div className="w-8 h-6 bg-white rounded-lg relative flex items-center justify-center">
+            <span className="text-purple-500 font-bold text-xs">Hi!</span>
+          </div>
+        </div>
+      ),
       title: "Bilingual School",
       description: "El Nivel Primario cuenta con un sólido proyecto educativo oficial de Jornada completa Bilingüe en Inglés con Formación en Lengua y Cultura Judaica. Implementamos desde sala de 2 años propuestas diversas e inmersivas, desde un enfoque inmersivo favoreciendo lo comunicativo para la preparación de ciudadanos globales. El dominio de la lengua está certificado por la Asociación Argentina de Cultura Inglesa y se rinden los exámenes internacionales de Cambridge."
     },
     {
-      icon: <DollarSign className="h-12 w-12 text-natan-blue" />,
+      icon: (
+        <div className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center">
+          <div className="flex space-x-1">
+            <div className="w-2 h-6 bg-white rounded-full"></div>
+            <div className="w-2 h-6 bg-white rounded-full"></div>
+            <div className="w-2 h-6 bg-white rounded-full"></div>
+          </div>
+        </div>
+      ),
       title: "Educación Financiera",
       description: "Consideramos necesaria la adopción e internalización de la educación financiera como herramienta superadora para nuestros alumnos. Partiendo de su primer emprendimiento, el Kiosco, llegando a armar carteras virtuales de inversión con cotización real en una simulación bursátil."
     },
     {
-      icon: <HeartHandshake className="h-12 w-12 text-natan-blue" />,
+      icon: (
+        <div className="w-16 h-16 bg-yellow-500 rounded-lg flex items-center justify-center">
+          <div className="w-8 h-8 bg-white rounded-full relative">
+            <div className="absolute top-1 left-1 w-2 h-6 bg-yellow-500 rounded-full"></div>
+            <div className="absolute top-2 right-1 w-4 h-2 bg-yellow-500 rounded-full"></div>
+            <div className="absolute bottom-1 left-2 w-3 h-3 bg-yellow-500 rounded-full"></div>
+          </div>
+        </div>
+      ),
+      title: "Tecnología e Innovación",
+      description: "En tecnología, robótica y programación nos proponemos acompañar a nuestros estudiantes para que puedan idear soluciones creativas a través de \"Aprender haciendo\" en nuestro TecnoLab con equipamiento de avanzada."
+    },
+    {
+      icon: (
+        <div className="w-16 h-16 bg-pink-400 rounded-lg flex items-center justify-center">
+          <div className="w-8 h-8 bg-white rounded relative">
+            <div className="absolute inset-1 border-2 border-pink-400 rounded"></div>
+            <div className="absolute top-2 left-2 w-4 h-1 bg-pink-400"></div>
+            <div className="absolute bottom-2 right-2 w-2 h-2 bg-pink-400 rounded-full"></div>
+          </div>
+        </div>
+      ),
       title: "Tradición Judía",
       description: "Vivimos nuestro judaísmo de manera plena, bajo el concepto de \"Amiut\": un fuerte sentido de pertenencia; son nuestras raíces, valores, costumbres y festividades. Enseñamos el ivrit como motor para construir y transformar ese mundo identitario."
     }
@@ -98,7 +133,7 @@ const PilaresSection = () => {
               className="opacity-0 translate-y-10 transition-all duration-700 glass-card p-8 flex flex-col items-center text-center"
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="mb-6 p-4 bg-blue-50 rounded-full">{pilar.icon}</div>
+              <div className="mb-6">{pilar.icon}</div>
               <h3 className="text-xl font-heading font-semibold mb-3 text-gray-800">{pilar.title}</h3>
               
               <div className="w-full">

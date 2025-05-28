@@ -48,8 +48,13 @@ const Hero = () => {
             </p>
           </div>
           
-          <p className="subtitle mb-8 drop-shadow-md">
+          <p className="subtitle mb-4 drop-shadow-md">
             Formamos líderes del futuro con excelencia académica, valores judíos y una educación bilingüe integral
+          </p>
+
+          {/* Frase destacada */}
+          <p className="text-2xl md:text-3xl font-bold mb-8 drop-shadow-md">
+            El mejor <span className="text-natan-yellow">comienzo</span> para un gran <span className="text-natan-yellow">futuro</span>
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
