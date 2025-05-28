@@ -1,29 +1,37 @@
+
 import React, { useEffect, useRef } from 'react';
+
 const InstitucionalSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('opacity-100');
-          entry.target.classList.remove('opacity-0', 'translate-y-10', 'translate-x-10');
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('opacity-100');
+            entry.target.classList.remove('opacity-0', 'translate-y-10', 'translate-x-10');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
     if (sectionRef.current) observer.observe(sectionRef.current);
     if (contentRef.current) observer.observe(contentRef.current);
     if (imageRef.current) observer.observe(imageRef.current);
+
     return () => {
       if (sectionRef.current) observer.unobserve(sectionRef.current);
       if (contentRef.current) observer.unobserve(contentRef.current);
       if (imageRef.current) observer.unobserve(imageRef.current);
     };
   }, []);
-  return <section id="institucional" className="py-20 bg-gray-50">
+
+  return (
+    <section id="institucional" className="py-20 bg-gray-50">
       <div ref={sectionRef} className="container-section opacity-0 translate-y-10 transition-all duration-700">
         <div className="text-center mb-16">
           <h2 className="heading-2 text-gray-900 mb-4">Institucional</h2>
@@ -42,17 +50,41 @@ const InstitucionalSection = () => {
               A lo largo de nuestra trayectoria, hemos construido una comunidad educativa sólida, donde cada familia forma parte activa del proceso de aprendizaje de sus hijos. Nuestro equipo docente altamente calificado trabaja en colaboración constante con los padres para garantizar que cada alumno alcance su máximo potencial.
             </p>
             
-            <div className="space-y-4">
-              <div className="glass-card p-4">
-                <h4 className="font-heading font-semibold text-natan-blue mb-2">Misión</h4>
-                <p className="text-gray-700">Educar, a partir de la cercanía y personalización logrando el éxito académico de cada estudiante, impartiendo un marco de sólidos valores y tradiciones judías, vinculadas a nuestras raíces. Contribuyendo en la incorporación de diferentes recursos tecnológicos e innovadores que permitan la formación de niños y niñas emprendedores con la habilidad y criterio resolutivo para adaptarse de forma independiente a los escenarios que les presente el futuro.</p>
+            <div className="space-y-6">
+              <div className="bg-gradient-to-r from-orange-400 to-orange-500 rounded-xl p-6 text-white">
+                <div className="text-center mb-4">
+                  <h4 className="font-heading font-bold text-2xl mb-2 text-white">MISIÓN</h4>
+                  <div className="bg-white/20 rounded-lg px-4 py-2 inline-block mb-4">
+                    <span className="font-semibold text-orange-200">ESCUELA INTERNACIONAL</span>
+                    <span className="font-bold text-teal-300 ml-2">NATAN GESANG</span>
+                  </div>
+                </div>
+                <p className="text-white leading-relaxed">
+                  <strong>Educar</strong>, a partir de la <strong>cercanía y personalización</strong> logrando el <strong>éxito académico de cada estudiante</strong>, impartiendo un marco de sólidos valores y tradiciones <strong>judías</strong>, vinculadas a nuestras raíces. Contribuyendo en la incorporación de diferentes recursos <strong>tecnológicos e innovadores</strong> que permitan la formación de niños y niñas <strong>emprendedores</strong> con la habilidad y criterio resolutivo para adaptarse de forma <strong>independiente</strong> a los escenarios que les presente el futuro.
+                </p>
               </div>
               
-              <div className="glass-card p-4">
-                <h4 className="font-heading font-semibold text-natan-blue mb-2">Visión</h4>
-                <p className="text-gray-700">La Institución será una comunidad abierta al cambio, dinamizadora de calidad educativa, dentro de un ambiente rico en valores y tradiciones del pueblo judío, convivencia, inclusión, formadora de personas emprendedoras, responsables y comprometidas con la cultura, la ciencia, la tecnología y la sustentabilidad, para generar los cambios sociales en el mundo del futuro La Escuela Internacional
-- Natan Gesang desea ser reconocida como un centro cultural y de formación, referente en Argentina y en todo el mundo. 
-- Ofrecer una enseñanza integral con orientación trilingüe de calidad para la formación de niños y niñas emprendedores que puedan afrontar con éxito los nuevos paradigmas de la educación del siglo XXI.</p>
+              <div className="bg-gradient-to-r from-orange-400 to-orange-500 rounded-xl p-6 text-white">
+                <div className="text-center mb-4">
+                  <h4 className="font-heading font-bold text-2xl mb-2 text-white">VISIÓN</h4>
+                  <div className="bg-white/20 rounded-lg px-4 py-2 inline-block mb-4">
+                    <span className="font-semibold text-orange-200">ESCUELA INTERNACIONAL</span>
+                    <span className="font-bold text-teal-300 ml-2">NATAN GESANG</span>
+                  </div>
+                </div>
+                <p className="text-white leading-relaxed mb-4">
+                  La Institución es una Comunidad abierta y dinámica, que ofrece la más alta <strong>calidad educativa</strong>, dentro de un ambiente rico en valores y tradiciones del <strong>pueblo judío</strong>, fomentando la convivencia e inclusión. Formadora de personas <strong>emprendedoras</strong>, responsables y comprometidas con la <strong>cultura, la ciencia, la tecnología y la sustentabilidad</strong>, para que generen los cambios sociales en el mundo del futuro:
+                </p>
+                <ul className="space-y-3 text-white">
+                  <li className="flex items-start">
+                    <span className="bg-white/30 w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span>La Escuela Internacional Natan Gesang desea ser <strong>reconocida como un centro cultural y de formación</strong>, referente en Argentina y en todo el mundo.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="bg-white/30 w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span>Ofrecer una <strong>enseñanza integral BILINGÜE</strong> castellano-inglés y con orientación en lengua hebrea, para la formación de niños y niñas emprendedores, que puedan <strong>afrontar con éxito los nuevos paradigmas de la educación del siglo XXI</strong>.</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -60,11 +92,17 @@ const InstitucionalSection = () => {
           <div ref={imageRef} className="opacity-0 translate-x-10 transition-all duration-700 delay-200">
             <div className="relative rounded-2xl overflow-hidden shadow-natan h-[500px]">
               <div className="absolute inset-0 bg-gradient-to-br from-natan-blue/30 to-natan-skyblue/30 mix-blend-multiply z-10"></div>
-              <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070" alt="Historia de Natan Gesang" className="w-full h-full object-cover" />
+              <img
+                src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070"
+                alt="Historia de Natan Gesang"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default InstitucionalSection;

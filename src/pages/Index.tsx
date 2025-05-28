@@ -3,11 +3,9 @@ import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import InstitucionalSection from '@/components/InstitucionalSection';
-import PilaresSection from '@/components/PilaresSection';
 import EducationalLevels from '@/components/EducationalLevels';
+import PilaresSection from '@/components/PilaresSection';
 import TemploSection from '@/components/TemploSection';
-import NewsSection from '@/components/NewsSection';
-import Gallery from '@/components/Gallery';
 import AccessSection from '@/components/AccessSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
@@ -33,11 +31,9 @@ const Index = () => {
           <div className="absolute top-[70%] right-10 w-40 h-40 bg-[#F3967B]/10 rotate-12 -z-10"></div>
           
           <InstitucionalSection />
-          <PilaresSection />
           <EducationalLevels />
+          <PilaresSection />
           <TemploSection />
-          <NewsSection />
-          <Gallery />
           <AccessSection />
           <ContactSection />
         </div>
