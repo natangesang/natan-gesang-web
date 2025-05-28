@@ -1,96 +1,76 @@
 
 import React, { useEffect, useRef } from 'react';
-import { ChevronDown } from 'lucide-react';
 
 const Hero = () => {
-  const refs = {
-    heading: useRef<HTMLHeadingElement>(null),
-    subheading: useRef<HTMLParagraphElement>(null),
-    button: useRef<HTMLAnchorElement>(null)
-  };
+  const heroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('opacity-100');
-          entry.target.classList.remove('opacity-0', 'translate-y-10');
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('opacity-100');
+            entry.target.classList.remove('opacity-0', 'translate-y-10');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
 
-    if (refs.heading.current) observer.observe(refs.heading.current);
-    if (refs.subheading.current) observer.observe(refs.subheading.current);
-    if (refs.button.current) observer.observe(refs.button.current);
+    if (heroRef.current) observer.observe(heroRef.current);
 
     return () => {
-      if (refs.heading.current) observer.unobserve(refs.heading.current);
-      if (refs.subheading.current) observer.unobserve(refs.subheading.current);
-      if (refs.button.current) observer.unobserve(refs.button.current);
+      if (heroRef.current) observer.unobserve(heroRef.current);
     };
   }, []);
 
-  return <section id="inicio" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-natan-blue to-natan-skyblue pt-24">
-      {/* Formas geométricas decorativas basadas en la imagen proporcionada */}
-      <div className="absolute top-[15%] left-[10%] w-16 h-32 bg-white/30 rounded-l-full"></div>
-      <div className="absolute top-[15%] left-[18%] w-16 h-32 bg-white/20 rounded-r-full"></div>
-      <div className="absolute top-[40%] right-[10%] w-24 h-24 bg-white/30 rounded-full"></div>
-      <div className="absolute bottom-[20%] left-[20%] w-32 h-16 bg-white/20 rounded-t-full"></div>
-      <div className="absolute top-[60%] right-[15%] w-32 h-16 bg-white/20 rounded-b-full"></div>
-      <div className="absolute top-[30%] left-[5%] w-16 h-16 bg-natan-teal/30 rounded-full"></div>
-      <div className="absolute bottom-[30%] right-[5%] w-16 h-16 bg-natan-pink/30 rounded-full"></div>
-      
-      {/* Cuadrados y rectángulos */}
-      <div className="absolute top-[20%] right-[20%] w-20 h-20 bg-natan-yellow/30"></div>
-      <div className="absolute bottom-[20%] left-[10%] w-16 h-32 bg-natan-coral/20"></div>
-      
-      {/* Líneas horizontales */}
-      <div className="absolute bottom-[15%] right-[25%] w-32 h-2 bg-white/30"></div>
-      <div className="absolute bottom-[12%] right-[25%] w-32 h-2 bg-white/30"></div>
-      <div className="absolute bottom-[9%] right-[25%] w-32 h-2 bg-white/30"></div>
-      
-      {/* Formas geométricas adicionales */}
-      <div className="absolute bottom-[10%] left-[30%] w-24 h-24 bg-white/10 rounded-bl-full"></div>
-      <div className="absolute top-[15%] right-[30%] w-16 h-16 border-2 border-white/30 rounded-tr-2xl"></div>
+  return (
+    <section id="inicio" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-natan-blue via-natan-skyblue to-natan-lightblue overflow-hidden">
+      {/* Formas geométricas decorativas */}
+      <div className="absolute top-[20%] left-[10%] w-64 h-64 bg-white/5 rounded-full animate-float"></div>
+      <div className="absolute bottom-[30%] right-[15%] w-48 h-48 bg-natan-orange/10 rotate-45 animate-pulse-light"></div>
+      <div className="absolute top-[60%] left-[5%] w-32 h-32 bg-natan-yellow/10 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute bottom-[10%] right-[40%] w-40 h-40 bg-white/5 rotate-12 animate-pulse-light" style={{ animationDelay: '1s' }}></div>
 
-      <div className="absolute inset-0 bg-opacity-70 z-0">
-        <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022')] bg-cover bg-center opacity-20 mix-blend-overlay" />
-      </div>
-
-      <div className="container max-w-7xl mx-auto px-4 text-white z-10 py-24 md:py-32">
-        <div className="flex flex-col items-center mb-12">
-          
-        </div>
-        
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 ref={refs.heading} className="opacity-0 translate-y-10 transition-all duration-700 font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
-            El mejor comienzo para
-            <br />
-            <span className="bg-white text-natan-blue px-2 pb-1 rounded-md mt-2 inline-block">
-              un gran futuro
-            </span>
+      <div ref={heroRef} className="container-section text-center text-white relative z-10 opacity-0 translate-y-10 transition-all duration-1000">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="heading-1 mb-6 drop-shadow-lg">
+            Escuela Internacional <span className="text-natan-yellow">Natan Gesang</span>
           </h1>
-
-          <p ref={refs.subheading} className="opacity-0 translate-y-10 transition-all duration-700 delay-300 text-xl md:text-2xl mb-10 max-w-3xl mx-auto">
-            Natan Gesang integra tecnología avanzada, educación bilingüe y valores de la tradición judía para formar líderes del mañana
+          
+          {/* Nuevo texto del header */}
+          <div className="mb-8 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
+            <p className="text-xl md:text-2xl font-medium leading-relaxed text-white">
+              Creada en 1920, nuestra institución sin fines de lucro está abocada a la educación.
+            </p>
+            <p className="text-xl md:text-2xl font-medium leading-relaxed text-white mt-2">
+              Somos una comunidad dinámica y en constante transformación.
+            </p>
+          </div>
+          
+          <p className="subtitle mb-8 drop-shadow-md">
+            Formamos líderes del futuro con excelencia académica, valores judíos y una educación bilingüe integral
           </p>
-
-          <a ref={refs.button} href="#propuesta" className="opacity-0 translate-y-10 transition-all duration-700 delay-500 inline-block bg-white text-natan-blue font-medium px-8 py-4 rounded-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
-            Descubrir propuesta educativa
-          </a>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#niveles" className="btn-primary bg-natan-orange hover:bg-natan-orange/90">
+              Conocé nuestros niveles
+            </a>
+            <a href="#contacto" className="btn-primary bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/40">
+              Contactanos
+            </a>
+          </div>
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-0 right-0 flex justify-center animate-bounce">
-        <a href="#propuesta" aria-label="Scroll down" className="text-white/80 hover:text-white transition-colors duration-300">
-          <ChevronDown size={32} />
-        </a>
+      {/* Indicador de scroll */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-white/70 rounded-full mt-2"></div>
+        </div>
       </div>
-      
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
-    </section>;
+    </section>
+  );
 };
 
 export default Hero;
