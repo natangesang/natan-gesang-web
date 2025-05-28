@@ -45,7 +45,7 @@ const InstitucionalSection = () => {
             <div className="space-y-4">
               <div className="glass-card p-4">
                 <h4 className="font-heading font-semibold text-natan-blue mb-2">Misión</h4>
-                <p className="text-gray-700">Educar, a partir de la cercanía y personalización logrando el éxito académico de cada estudiante, impartiendo un marco de sólidos valores y tradiciones judías vinculadas a nuestras raíces. Contribuyendo en la incorporación de diferentes recursos tecnológicos e innovadores que permitan la formación de niños y niñas emprendedores con la habilidad y criterio resolutivo para adaptarse a los escenarios que les presente el futuro de forma independiente.</p>
+                <p className="text-gray-700">Educar, a partir de la cercanía y personalización logrando el éxito académico de cada estudiante, impartiendo un marco de sólidos valores y tradiciones judías, vinculadas a nuestras raíces. Contribuyendo en la incorporación de diferentes recursos tecnológicos e innovadores que permitan la formación de niños y niñas emprendedores con la habilidad y criterio resolutivo para adaptarse de forma independiente a los escenarios que les presente el futuro.</p>
               </div>
               
               <div className="glass-card p-4">
