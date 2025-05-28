@@ -1,18 +1,20 @@
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { 
   Code, 
   BookOpen, 
   Globe, 
-  Rocket, 
   GraduationCap,
-  Star, 
-  HeartHandshake 
+  DollarSign, 
+  HeartHandshake,
+  ChevronDown,
+  ChevronUp
 } from 'lucide-react';
 
 const PilaresSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const pilaresRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [expandedPilar, setExpandedPilar] = useState<number | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -41,41 +43,40 @@ const PilaresSection = () => {
     };
   }, []);
 
+  const toggleExpanded = (index: number) => {
+    setExpandedPilar(expandedPilar === index ? null : index);
+  };
+
   const pilares = [
     {
       icon: <Code className="h-12 w-12 text-natan-blue" />,
-      title: "Tecnología",
-      description: "Integramos la tecnología al servicio del aprendizaje, preparando a nuestros alumnos para los desafíos digitales del futuro."
-    },
-    {
-      icon: <Star className="h-12 w-12 text-natan-blue" />,
-      title: "Modo Gesang",
-      description: "Seguimos el modelo educativo Israelí, donde toda la enseñanza se dirige hacia la formación de emprendedores, científicos y profesionales de excelencia. Israel es considerado una Start Up Nation donde año a año se conforman nuevas empresas líderes a nivel mundial. Alumnos de las principales Universidades del mundo como el MIT, Yale, Harvard, Oxford, Cambridge, entre otras, realizan pasantías en empresas y universidades Israelíes para adquirir este know how."
+      title: "Tecnología e Innovación",
+      description: "En tecnología, robótica y programación nos proponemos acompañar a nuestros estudiantes para que puedan idear soluciones creativas a través de \"Aprender haciendo\" en nuestro TecnoLab con equipamiento de avanzada."
     },
     {
       icon: <BookOpen className="h-12 w-12 text-natan-blue" />,
       title: "Proyecto Educativo",
-      description: "Un programa integral que forma a los estudiantes en aspectos académicos, sociales y emocionales."
+      description: "Acompañamos de manera personalizada a cada alumno, brindándole la posibilidad de un constante crecimiento, en un entorno cálido y con desafíos que estimulen el deseo de seguir aprendiendo, una educación bilingüe y de calidad, junto a las herramientas tecnológicas necesarias para su futuro."
     },
     {
       icon: <GraduationCap className="h-12 w-12 text-natan-blue" />,
       title: "Excelencia Académica",
-      description: "Comprometidos con los más altos estándares educativos para impulsar el desarrollo pleno de cada alumno."
+      description: "Nuestros alumnos desarrollan al máximo sus potencialidades, favoreciendo la construcción de competencias que permitan el acceso crítico y reflexivo al conocimiento, celebrando cada logro alcanzado."
     },
     {
       icon: <Globe className="h-12 w-12 text-natan-blue" />,
-      title: "Inglés",
-      description: "Programa bilingüe que prepara a nuestros estudiantes para comunicarse con fluidez en un mundo globalizado."
+      title: "Bilingual School",
+      description: "El Nivel Primario cuenta con un sólido proyecto educativo oficial de Jornada completa Bilingüe en Inglés con Formación en Lengua y Cultura Judaica. Implementamos desde sala de 2 años propuestas diversas e inmersivas, desde un enfoque inmersivo favoreciendo lo comunicativo para la preparación de ciudadanos globales. El dominio de la lengua está certificado por la Asociación Argentina de Cultura Inglesa y se rinden los exámenes internacionales de Cambridge."
     },
     {
-      icon: <Rocket className="h-12 w-12 text-natan-blue" />,
-      title: "Emprendedores",
-      description: "Desarrollamos habilidades para la resolución creativa de problemas y el espíritu emprendedor desde las primeras etapas."
+      icon: <DollarSign className="h-12 w-12 text-natan-blue" />,
+      title: "Educación Financiera",
+      description: "Consideramos necesaria la adopción e internalización de la educación financiera como herramienta superadora para nuestros alumnos. Partiendo de su primer emprendimiento, el Kiosco, llegando a armar carteras virtuales de inversión con cotización real en una simulación bursátil."
     },
     {
       icon: <HeartHandshake className="h-12 w-12 text-natan-blue" />,
       title: "Tradición Judía",
-      description: "Valoramos y transmitimos nuestra herencia cultural y valores judíos como base de identidad y pertenencia."
+      description: "Vivimos nuestro judaísmo de manera plena, bajo el concepto de \"Amiut\": un fuerte sentido de pertenencia; son nuestras raíces, valores, costumbres y festividades. Enseñamos el ivrit como motor para construir y transformar ese mundo identitario."
     }
   ];
 
@@ -99,7 +100,26 @@ const PilaresSection = () => {
             >
               <div className="mb-6 p-4 bg-blue-50 rounded-full">{pilar.icon}</div>
               <h3 className="text-xl font-heading font-semibold mb-3 text-gray-800">{pilar.title}</h3>
-              <p className="text-gray-600">{pilar.description}</p>
+              
+              <div className="w-full">
+                <button
+                  onClick={() => toggleExpanded(index)}
+                  className="flex items-center justify-center w-full text-natan-blue hover:text-natan-skyblue transition-colors mb-3"
+                >
+                  <span className="mr-2">Leer más</span>
+                  {expandedPilar === index ? (
+                    <ChevronUp className="h-4 w-4" />
+                  ) : (
+                    <ChevronDown className="h-4 w-4" />
+                  )}
+                </button>
+                
+                <div className={`overflow-hidden transition-all duration-300 ${
+                  expandedPilar === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                }`}>
+                  <p className="text-gray-600 text-sm leading-relaxed">{pilar.description}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
