@@ -41,11 +41,12 @@ const PilaresSection = () => {
   const pilares = [
     {
       icon: (
-        <div className="w-16 h-16 bg-pink-500 rounded-lg flex items-center justify-center">
-          <div className="w-8 h-10 bg-white rounded-sm relative">
-            <div className="absolute top-1 left-1 w-6 h-2 bg-pink-500 rounded-sm"></div>
-            <div className="absolute bottom-1 left-1 w-4 h-4 bg-pink-500 rounded-sm"></div>
-          </div>
+        <div className="w-16 h-16 rounded-lg overflow-hidden">
+          <img
+            src="/lovable-uploads/007342b7-cf3e-46d5-b9c0-4a8a1f77c61e.png"
+            alt="Proyecto Educativo"
+            className="w-full h-full object-cover"
+          />
         </div>
       ),
       title: "Proyecto Educativo",
@@ -53,11 +54,12 @@ const PilaresSection = () => {
     },
     {
       icon: (
-        <div className="w-16 h-16 bg-teal-500 rounded-lg flex items-center justify-center">
-          <div className="w-10 h-8 bg-white rounded relative">
-            <div className="absolute top-1 left-2 w-6 h-2 bg-teal-500"></div>
-            <div className="absolute top-1 right-1 w-2 h-6 bg-teal-500 rounded-full"></div>
-          </div>
+        <div className="w-16 h-16 rounded-lg overflow-hidden">
+          <img
+            src="/lovable-uploads/8a8efef4-86c4-4085-b1c3-7cbf963d52db.png"
+            alt="Excelencia Académica"
+            className="w-full h-full object-cover"
+          />
         </div>
       ),
       title: "Excelencia Académica",
@@ -65,10 +67,12 @@ const PilaresSection = () => {
     },
     {
       icon: (
-        <div className="w-16 h-16 bg-purple-500 rounded-lg flex items-center justify-center">
-          <div className="w-8 h-6 bg-white rounded-lg relative flex items-center justify-center">
-            <span className="text-purple-500 font-bold text-xs">Hi!</span>
-          </div>
+        <div className="w-16 h-16 rounded-lg overflow-hidden">
+          <img
+            src="/lovable-uploads/8ba07f59-0382-461c-9776-3210328f3f51.png"
+            alt="Bilingual School"
+            className="w-full h-full object-cover"
+          />
         </div>
       ),
       title: "Bilingual School",
@@ -76,12 +80,12 @@ const PilaresSection = () => {
     },
     {
       icon: (
-        <div className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center">
-          <div className="flex space-x-1">
-            <div className="w-2 h-6 bg-white rounded-full"></div>
-            <div className="w-2 h-6 bg-white rounded-full"></div>
-            <div className="w-2 h-6 bg-white rounded-full"></div>
-          </div>
+        <div className="w-16 h-16 rounded-lg overflow-hidden">
+          <img
+            src="/lovable-uploads/74f0982e-0010-4dbe-8f2c-2b8673fe9cca.png"
+            alt="Educación Financiera"
+            className="w-full h-full object-cover"
+          />
         </div>
       ),
       title: "Educación Financiera",
@@ -89,12 +93,12 @@ const PilaresSection = () => {
     },
     {
       icon: (
-        <div className="w-16 h-16 bg-yellow-500 rounded-lg flex items-center justify-center">
-          <div className="w-8 h-8 bg-white rounded-full relative">
-            <div className="absolute top-1 left-1 w-2 h-6 bg-yellow-500 rounded-full"></div>
-            <div className="absolute top-2 right-1 w-4 h-2 bg-yellow-500 rounded-full"></div>
-            <div className="absolute bottom-1 left-2 w-3 h-3 bg-yellow-500 rounded-full"></div>
-          </div>
+        <div className="w-16 h-16 rounded-lg overflow-hidden">
+          <img
+            src="/lovable-uploads/9ad98ac7-fd4a-463a-8ec9-9ba0ad668700.png"
+            alt="Tecnología e Innovación"
+            className="w-full h-full object-cover"
+          />
         </div>
       ),
       title: "Tecnología e Innovación",
@@ -102,12 +106,12 @@ const PilaresSection = () => {
     },
     {
       icon: (
-        <div className="w-16 h-16 bg-pink-400 rounded-lg flex items-center justify-center">
-          <div className="w-8 h-8 bg-white rounded relative">
-            <div className="absolute inset-1 border-2 border-pink-400 rounded"></div>
-            <div className="absolute top-2 left-2 w-4 h-1 bg-pink-400"></div>
-            <div className="absolute bottom-2 right-2 w-2 h-2 bg-pink-400 rounded-full"></div>
-          </div>
+        <div className="w-16 h-16 rounded-lg overflow-hidden">
+          <img
+            src="/lovable-uploads/ccc2a459-5869-4d8d-b465-7343b33237c5.png"
+            alt="Tradición Judía"
+            className="w-full h-full object-cover"
+          />
         </div>
       ),
       title: "Tradición Judía",
