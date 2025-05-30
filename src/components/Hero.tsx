@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 
 const Hero = () => {
@@ -23,8 +24,22 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-natan-blue via-natan-skyblue to-natan-lightblue overflow-hidden pt-24">
-      {/* Formas geométricas decorativas */}
+    <section id="inicio" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-natan-blue via-natan-skyblue to-natan-lightblue overflow-hidden">
+      {/* Imágenes geométricas como fondo */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/lovable-uploads/1ac28933-5bab-4512-95ca-0b60e36288c9.png"
+          alt="Geometric pattern 1"
+          className="absolute top-0 left-0 w-1/2 h-full object-cover opacity-20"
+        />
+        <img
+          src="/lovable-uploads/9ba22466-79f2-490c-95ca-cfa56a615d08.png"
+          alt="Geometric pattern 2"
+          className="absolute top-0 right-0 w-1/2 h-full object-cover opacity-20"
+        />
+      </div>
+
+      {/* Formas geométricas decorativas adicionales */}
       <div className="absolute top-[20%] left-[10%] w-64 h-64 bg-white/5 rounded-full animate-float"></div>
       <div className="absolute bottom-[30%] right-[15%] w-48 h-48 bg-natan-orange/10 rotate-45 animate-pulse-light"></div>
       <div className="absolute top-[60%] left-[5%] w-32 h-32 bg-natan-yellow/10 rounded-full animate-float" style={{
@@ -46,10 +61,6 @@ const Hero = () => {
               El mejor <span className="text-natan-yellow bg-white/20 px-3 py-1 rounded-lg">comienzo</span> para un gran <span className="text-natan-yellow bg-white/20 px-3 py-1 rounded-lg">futuro</span>
             </p>
           </div>
-          
-          <p className="subtitle mb-8 drop-shadow-md font-normal">
-            Formamos líderes del futuro con excelencia académica, valores judíos y una educación bilingüe integral
-          </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="#niveles" className="btn-primary bg-natan-orange hover:bg-natan-orange/90">

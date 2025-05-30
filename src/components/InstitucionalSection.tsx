@@ -5,6 +5,7 @@ const InstitucionalSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
+  const modoGesangRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -22,11 +23,13 @@ const InstitucionalSection = () => {
     if (sectionRef.current) observer.observe(sectionRef.current);
     if (contentRef.current) observer.observe(contentRef.current);
     if (imageRef.current) observer.observe(imageRef.current);
+    if (modoGesangRef.current) observer.observe(modoGesangRef.current);
 
     return () => {
       if (sectionRef.current) observer.unobserve(sectionRef.current);
       if (contentRef.current) observer.unobserve(contentRef.current);
       if (imageRef.current) observer.unobserve(imageRef.current);
+      if (modoGesangRef.current) observer.unobserve(modoGesangRef.current);
     };
   }, []);
 
@@ -42,12 +45,12 @@ const InstitucionalSection = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div ref={contentRef} className="opacity-0 translate-y-10 transition-all duration-700">
-            <h3 className="font-heading text-2xl font-semibold mb-6 text-gray-800">Nuestra Historia</h3>
+            <h3 className="font-heading text-2xl font-semibold mb-6 text-gray-800">Nuestra Trayectoria</h3>
             <p className="text-gray-700 mb-6">
-              Natan Gesang nace con el objetivo de brindar una educación de vanguardia, combinando lo mejor de la tradición judía con las más innovadoras metodologías pedagógicas. Desde nuestros inicios, nos hemos comprometido con la excelencia educativa y la formación integral de cada estudiante.
+              Fundada en 1920 como una institución educativa sin fines de lucro, nuestro colegio se proyecta constantemente hacia adelante. Aquí, la vanguardia no solo se entrelaza con nuestras profundas raíces y tradiciones, sino que las impulsa, creando un futuro dinámico que honra nuestro pasado y define una identidad singularmente innovadora.
             </p>
             <p className="text-gray-700 mb-8">
-              A lo largo de nuestra trayectoria, hemos construido una comunidad educativa sólida, donde cada familia forma parte activa del proceso de aprendizaje de sus hijos. Nuestro equipo docente altamente calificado trabaja en colaboración constante con los padres para garantizar que cada alumno alcance su máximo potencial.
+              A lo largo de nuestra trayectoria, hemos construido una comunidad educativa sólida, donde cada familia forma parte activa del proceso de aprendizaje de sus hijos. Nuestro equipo docente altamente calificado trabaja en colaboración constante con los padres para garantizar que cada alumno alcance su máximo potencial. Formamos líderes del futuro combinando excelencia académica, valores judíos, educación en tres idiomas con certificación internacional e innovación tecnológica.
             </p>
           </div>
           
@@ -59,6 +62,27 @@ const InstitucionalSection = () => {
                 alt="Fachada Natan Gesang"
                 className="w-full h-full object-cover"
               />
+            </div>
+          </div>
+        </div>
+
+        {/* Sección #Modo Gesang */}
+        <div ref={modoGesangRef} className="opacity-0 translate-y-10 transition-all duration-700 mb-16">
+          <div className="bg-gradient-to-r from-natan-blue to-natan-skyblue rounded-2xl p-8 text-white">
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="flex-shrink-0">
+                <img
+                  src="/lovable-uploads/fa25af2d-6f72-4a65-aa50-c8967ae9d7ca.png"
+                  alt="#Modo Gesang Logo"
+                  className="w-24 h-24 md:w-32 md:h-32 object-contain"
+                />
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="font-heading text-3xl font-bold mb-4 text-white">#Modo Gesang</h3>
+                <p className="text-white/90 text-lg leading-relaxed">
+                  Es una forma de ser, de transmitir valores, es amistad, es Comunidad, es familia. Es atreverse a ver el mundo de una manera diferente y diversa. Es educarlos para que construyan su futuro acompañándolos a cada paso.
+                </p>
+              </div>
             </div>
           </div>
         </div>
