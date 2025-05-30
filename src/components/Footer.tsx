@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { MapPin, Phone, Mail } from 'lucide-react';
 import SocialLinks from './SocialLinks';
@@ -21,7 +20,10 @@ const Footer = () => {
             <p className="text-blue-100 mb-6">
               Formando ciudadanos globales con valores judíos e innovación tecnológica para los desafíos del mañana.
             </p>
-            <SocialLinks />
+            <div className="mb-4">
+              <h3 className="text-lg font-heading font-semibold mb-4">Seguinos en redes sociales</h3>
+              <SocialLinks />
+            </div>
           </div>
 
           <div>
