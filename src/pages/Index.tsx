@@ -6,6 +6,7 @@ import InstitucionalSection from '@/components/InstitucionalSection';
 import EducationalLevels from '@/components/EducationalLevels';
 import PilaresSection from '@/components/PilaresSection';
 import TemploSection from '@/components/TemploSection';
+import AlianzasSection from '@/components/AlianzasSection';
 import AccessSection from '@/components/AccessSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
@@ -34,6 +35,7 @@ const Index = () => {
           <EducationalLevels />
           <PilaresSection />
           <TemploSection />
+          <AlianzasSection />
           <AccessSection />
           <ContactSection />
         </div>

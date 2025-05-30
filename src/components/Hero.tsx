@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
+
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -12,45 +14,41 @@ const Hero = () => {
     }, {
       threshold: 0.1
     });
+
     if (heroRef.current) observer.observe(heroRef.current);
+
     return () => {
       if (heroRef.current) observer.unobserve(heroRef.current);
     };
   }, []);
-  return <section id="inicio" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-natan-blue via-natan-skyblue to-natan-lightblue overflow-hidden">
+
+  return (
+    <section id="inicio" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-natan-blue via-natan-skyblue to-natan-lightblue overflow-hidden pt-24">
       {/* Formas geométricas decorativas */}
       <div className="absolute top-[20%] left-[10%] w-64 h-64 bg-white/5 rounded-full animate-float"></div>
       <div className="absolute bottom-[30%] right-[15%] w-48 h-48 bg-natan-orange/10 rotate-45 animate-pulse-light"></div>
       <div className="absolute top-[60%] left-[5%] w-32 h-32 bg-natan-yellow/10 rounded-full animate-float" style={{
-      animationDelay: '2s'
-    }}></div>
+        animationDelay: '2s'
+      }}></div>
       <div className="absolute bottom-[10%] right-[40%] w-40 h-40 bg-white/5 rotate-12 animate-pulse-light" style={{
-      animationDelay: '1s'
-    }}></div>
+        animationDelay: '1s'
+      }}></div>
 
       <div ref={heroRef} className="container-section text-center text-white relative z-10 opacity-0 translate-y-10 transition-all duration-1000">
         <div className="max-w-4xl mx-auto px-[24px] py-[24px]">
-          <h1 className="heading-1 mb-6 drop-shadow-lg">
+          <h1 className="heading-1 mb-8 drop-shadow-lg">
             Escuela Internacional <span className="text-natan-yellow">Natan Gesang</span>
           </h1>
           
-          {/* Nuevo texto del header */}
-          <div className="mb-8 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
-            <p className="text-xl md:text-2xl font-medium leading-relaxed text-white">
-              Creada en 1920, nuestra institución sin fines de lucro está abocada a la educación.
-            </p>
-            <p className="text-xl md:text-2xl font-medium leading-relaxed text-white mt-2">
-              Somos una comunidad dinámica y en constante transformación.
+          {/* Mensaje destacado principal */}
+          <div className="mb-8 p-8 bg-white/15 backdrop-blur-md rounded-3xl border border-white/30">
+            <p className="text-3xl md:text-4xl font-bold leading-relaxed text-white drop-shadow-lg">
+              El mejor <span className="text-natan-yellow bg-white/20 px-3 py-1 rounded-lg">comienzo</span> para un gran <span className="text-natan-yellow bg-white/20 px-3 py-1 rounded-lg">futuro</span>
             </p>
           </div>
           
-          <p className="subtitle mb-4 drop-shadow-md font-normal">
+          <p className="subtitle mb-8 drop-shadow-md font-normal">
             Formamos líderes del futuro con excelencia académica, valores judíos y una educación bilingüe integral
-          </p>
-
-          {/* Frase destacada */}
-          <p className="text-2xl md:text-3xl font-bold mb-8 drop-shadow-md">
-            El mejor <span className="text-natan-yellow">comienzo</span> para un gran <span className="text-natan-yellow">futuro</span>
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -70,6 +68,8 @@ const Hero = () => {
           <div className="w-1 h-3 bg-white/70 rounded-full mt-2"></div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;

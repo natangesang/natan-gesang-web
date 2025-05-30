@@ -19,8 +19,8 @@ const TemploSection = () => {
           <p className="subtitle mx-auto">Un espacio de conexión con nuestras raíces y tradiciones</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="order-2 md:order-1">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+          <div>
             <Card className="glass-card overflow-hidden border-none bg-white/70">
               <CardContent className="p-8">
                 <div className="flex items-center mb-4 text-natan-blue">
@@ -41,21 +41,52 @@ const TemploSection = () => {
               </CardContent>
             </Card>
           </div>
-          <div className="order-1 md:order-2 relative">
+          <div className="relative">
             <div className="aspect-video bg-natan-blue/10 rounded-xl overflow-hidden relative">
-              {/* Placeholder for temple image */}
-              <div className="absolute inset-0 bg-gradient-to-br from-natan-blue/20 to-natan-purple/20 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-20 h-20 mx-auto bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-4">
-                    <Star className="text-white" size={32} />
-                  </div>
-                  <p className="text-white font-medium">Imagen del Templo</p>
-                </div>
-              </div>
+              <img
+                src="/lovable-uploads/1f3baff7-ff45-4554-bb26-7540d716dd66.png"
+                alt="Ceremonia en el Templo Natan Gesang"
+                className="w-full h-full object-cover"
+              />
             </div>
             {/* Geometric accent */}
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-natan-yellow rounded-full opacity-30 z-0"></div>
             <div className="absolute -top-4 -left-4 w-12 h-12 bg-natan-pink rounded-md opacity-30 z-0 rotate-45"></div>
+          </div>
+        </div>
+
+        {/* Nueva imagen del templo */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="relative order-2 md:order-1">
+            <div className="aspect-video bg-natan-blue/10 rounded-xl overflow-hidden relative">
+              <img
+                src="/lovable-uploads/f078073a-8b21-4bb6-9710-0f9a4099ea05.png"
+                alt="Elementos ceremoniales del Templo"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-natan-teal rounded-full opacity-30 z-0"></div>
+            <div className="absolute -top-4 -right-4 w-16 h-16 bg-natan-orange rounded-md opacity-30 z-0 rotate-12"></div>
+          </div>
+          <div className="order-1 md:order-2">
+            <Card className="glass-card overflow-hidden border-none bg-white/70">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-4 text-natan-blue">
+                  <Star className="mr-2" size={24} />
+                  <h3 className="text-xl font-semibold">Tradición y Modernidad</h3>
+                </div>
+                <p className="mb-4 text-gray-700">
+                  En nuestro templo se fusionan la tradición milenaria judía con un enfoque moderno y dinámico, creando un ambiente donde cada generación encuentra su lugar en la continuidad de nuestra herencia cultural.
+                </p>
+                <div className="flex items-center mb-4 text-natan-blue">
+                  <Star className="mr-2" size={24} />
+                  <h3 className="text-xl font-semibold">Comunidad Unida</h3>
+                </div>
+                <p className="text-gray-700">
+                  Familias de todas las edades se reúnen para compartir momentos significativos, fortaleciendo los lazos comunitarios y transmitiendo valores que trascienden generaciones.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>

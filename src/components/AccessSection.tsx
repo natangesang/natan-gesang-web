@@ -31,7 +31,7 @@ const AccessSection = () => {
               comunicaciones y gestionar trámites relacionados con la educación de su hijo.
             </p>
             <a 
-              href="https://padres.natangesang.edu.ar" 
+              href="https://plataforma.acadeu.com/i/natan-gesang" 
               target="_blank"
               rel="noopener noreferrer" 
               className="inline-flex items-center font-medium text-[#F3967B] hover:text-white transition-colors"
@@ -54,7 +54,7 @@ const AccessSection = () => {
               académicos, entregan tareas y participan en actividades interactivas.
             </p>
             <a 
-              href="https://classroom.natangesang.edu.ar" 
+              href="https://classroom.google.com/" 
               target="_blank"
               rel="noopener noreferrer" 
               className="inline-flex items-center font-medium text-natan-skyblue hover:text-white transition-colors"
