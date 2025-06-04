@@ -79,8 +79,11 @@ const InstitucionalSection = () => {
               </div>
               <div className="flex-1 text-center md:text-left">
                 <h3 className="font-heading text-3xl font-bold mb-4 text-white">#Modo Gesang</h3>
+                <p className="text-white/90 text-lg leading-relaxed mb-4">
+                  Es nuestro manifiesto. Es la esencia que nos define: <strong>amistad, comunidad, familia, innovación, excelencia académica y espíritu emprendedor</strong>. Es la valentía de ver el mundo con una mirada diversa, educando a nuestros alumnos para que construyan su futuro, acompañándolos a cada paso. Es la pasión que nos impulsa a <strong>descubrir, construir ante cada dificultad, abrazarnos y soñar en grande</strong>, sabiendo que caerse es parte del camino para levantarse y lograrlo.
+                </p>
                 <p className="text-white/90 text-lg leading-relaxed">
-                  Es una forma de ser, de transmitir valores, es amistad, es Comunidad, es familia. Es atreverse a ver el mundo de una manera diferente y diversa. Es educarlos para que construyan su futuro acompañándolos a cada paso.
+                  #ModoGesang es esa conexión especial con nuestros morim; es <strong>ir siempre por más</strong>, valorando lo que somos, lo que podemos dar y aprender juntos.
                 </p>
               </div>
             </div>
@@ -144,7 +147,7 @@ const InstitucionalSection = () => {
               </li>
               <li className="flex items-start">
                 <span className="bg-white/30 w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Ofrecer una <strong>enseñanza integral BILINGÜE</strong> castellano-inglés y con orientación en lengua hebrea, para la formación de niños y niñas emprendedores, que puedan <strong>afrontar con éxito los nuevos paradigmas de la educación del siglo XXI</strong>.</span>
+                <span>Ofrecer una <strong>enseñanza integral BILINGÜE</strong> castellano-inglés y con orientación y certificación en lengua hebrea, para la formación de niños y niñas emprendedores, que puedan <strong>afrontar con éxito los nuevos paradigmas de la educación del siglo XXI</strong>.</span>
               </li>
             </ul>
           </div>
