@@ -1,6 +1,7 @@
 
-import React from 'react';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import React, { useEffect } from 'react';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 
 const HeroCarousel = () => {
   const images = [
@@ -42,25 +43,45 @@ const HeroCarousel = () => {
     }
   ];
 
+  // Agrupar las imágenes de 3 en 3
+  const imageGroups = [];
+  for (let i = 0; i < images.length; i += 3) {
+    imageGroups.push(images.slice(i, i + 3));
+  }
+
+  const [api, setApi] = React.useState<CarouselApi>();
+
+  const autoplayPlugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true })
+  );
+
   return (
-    <div className="relative w-full max-w-4xl mx-auto">
+    <div className="relative w-full max-w-5xl mx-auto">
       <Carousel
+        setApi={setApi}
+        plugins={[autoplayPlugin.current]}
         opts={{
           align: "start",
           loop: true,
         }}
         className="w-full"
+        onMouseEnter={autoplayPlugin.current.stop}
+        onMouseLeave={autoplayPlugin.current.reset}
       >
         <CarouselContent>
-          {images.map((image, index) => (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-              <div className="relative rounded-2xl overflow-hidden shadow-natan h-[280px] mx-2">
-                <div className="absolute inset-0 bg-gradient-to-t from-natan-blue/30 to-transparent z-10"></div>
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
+          {imageGroups.map((group, groupIndex) => (
+            <CarouselItem key={groupIndex} className="w-full">
+              <div className="grid grid-cols-3 gap-4 px-2">
+                {group.map((image, imageIndex) => (
+                  <div key={imageIndex} className="relative rounded-2xl overflow-hidden shadow-natan h-[280px]">
+                    <div className="absolute inset-0 bg-gradient-to-t from-natan-blue/30 to-transparent z-10"></div>
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                ))}
               </div>
             </CarouselItem>
           ))}
