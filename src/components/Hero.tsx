@@ -1,4 +1,6 @@
+
 import React, { useEffect, useRef } from 'react';
+import HeroCarousel from './HeroCarousel';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -49,7 +51,7 @@ const Hero = () => {
       }}></div>
 
       <div ref={heroRef} className="container-section text-center text-white relative z-10 opacity-0 translate-y-10 transition-all duration-1000">
-        <div className="max-w-4xl mx-auto px-[24px] py-[24px]">
+        <div className="max-w-6xl mx-auto px-[24px] py-[24px]">
           <h1 className="heading-1 mb-8 drop-shadow-lg">
             Escuela Internacional <span className="text-natan-yellow">Natan Gesang</span>
           </h1>
@@ -59,6 +61,11 @@ const Hero = () => {
             <p className="text-3xl md:text-4xl font-bold leading-relaxed text-white drop-shadow-lg">
               El mejor <span className="text-natan-yellow bg-white/20 px-3 py-1 rounded-lg">comienzo</span> para un gran <span className="text-natan-yellow bg-white/20 px-3 py-1 rounded-lg">futuro</span>
             </p>
+          </div>
+
+          {/* Carrusel de fotos */}
+          <div className="mb-12">
+            <HeroCarousel />
           </div>
           
           <div className="flex justify-center">

@@ -58,9 +58,9 @@ const InstitucionalSection = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-natan h-[400px]">
               <div className="absolute inset-0 bg-gradient-to-br from-natan-blue/20 to-natan-skyblue/20 mix-blend-multiply z-10"></div>
               <img
-                src="/lovable-uploads/caea4a4c-42bf-48e1-b25e-cd880c347110.png"
-                alt="Fachada Natan Gesang"
-                className="w-full h-full object-cover"
+                src="/lovable-uploads/29bbcc0b-2285-4515-8a5d-ae7595828b3c.png"
+                alt="Fachada Natan Gesang con logo institucional"
+                className="w-full h-full object-cover object-bottom"
               />
             </div>
           </div>
