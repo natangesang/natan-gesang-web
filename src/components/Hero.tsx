@@ -38,7 +38,7 @@ const Hero = () => {
       <div ref={heroRef} className="container-section text-center text-white relative z-10 opacity-0 translate-y-10 transition-all duration-1000">
         <div className="max-w-6xl mx-auto px-[24px] py-[24px]">
           <h1 className="mb-8 drop-shadow-lg">
-            <span className="block text-4xl md:text-5xl lg:text-6xl font-bold font-serif tracking-wide text-natan-coral">
+            <span className="block text-4xl md:text-5xl font-bold font-serif tracking-wide text-natan-coral lg:text-4xl">
               ESCUELA INTERNACIONAL
             </span>
             <span style={{
