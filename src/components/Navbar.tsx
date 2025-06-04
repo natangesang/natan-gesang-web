@@ -30,7 +30,7 @@ const Navbar = () => {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-4',
-        scrolled ? 'bg-white/90 backdrop-blur-md shadow-md' : 'bg-transparent'
+        scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' : 'bg-white/10 backdrop-blur-md'
       )}
     >
       <div className="container max-w-7xl mx-auto flex justify-between items-center">
@@ -53,15 +53,15 @@ const Navbar = () => {
               href="https://plataforma.acadeu.com/i/natan-gesang"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-3 py-2 rounded bg-natan-blue text-white hover:bg-natan-blue/90 transition-colors"
+              className="px-4 py-2 rounded-lg bg-natan-blue text-white hover:bg-natan-blue/90 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 font-semibold"
             >
-              Portal Padres
+              Acadeu
             </a>
             <a
               href="https://classroom.google.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-3 py-2 rounded bg-natan-orange text-white hover:bg-natan-orange/90 transition-colors"
+              className="px-4 py-2 rounded-lg bg-natan-orange text-white hover:bg-natan-orange/90 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 font-semibold"
             >
               Classroom
             </a>
@@ -107,7 +107,7 @@ const Navbar = () => {
             className="px-4 py-2 rounded bg-natan-blue text-white hover:bg-opacity-90 transition-colors text-center"
             onClick={() => setIsOpen(false)}
           >
-            Portal Padres
+            Acadeu
           </a>
           <a
             href="https://classroom.google.com/"
@@ -149,8 +149,8 @@ const NavLinks = ({ mobile = false, scrolled = false, onClick }: NavLinksProps) 
           href={link.href}
           className={cn(
             mobile
-              ? 'text-xl font-medium py-2 text-natan-blue hover:text-natan-orange transition-colors'
-              : 'font-medium transition-colors duration-300 relative drop-shadow-md after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-natan-orange after:origin-right after:scale-x-0 after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100',
+              ? 'text-xl font-bold py-2 text-natan-blue hover:text-natan-orange transition-all duration-300 hover:scale-105'
+              : 'font-bold text-lg transition-all duration-300 relative drop-shadow-lg after:absolute after:bottom-0 after:left-0 after:right-0 after:h-1 after:bg-natan-orange after:origin-right after:scale-x-0 after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100 hover:scale-105',
               scrolled 
                 ? 'text-natan-blue hover:text-natan-orange' 
                 : 'text-white hover:text-natan-orange'

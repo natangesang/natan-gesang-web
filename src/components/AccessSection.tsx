@@ -24,7 +24,7 @@ const AccessSection = () => {
               <div className="w-12 h-12 rounded-full bg-[#F3967B] flex items-center justify-center mr-4">
                 <Users size={24} className="text-white" />
               </div>
-              <h3 className="text-xl font-semibold">Portal de Padres</h3>
+              <h3 className="text-xl font-semibold">Acadeu</h3>
             </div>
             <p className="mb-4 text-blue-100">
               Acceda al sistema exclusivo para padres donde podrá consultar calificaciones, 
@@ -36,7 +36,7 @@ const AccessSection = () => {
               rel="noopener noreferrer" 
               className="inline-flex items-center font-medium text-[#F3967B] hover:text-white transition-colors"
             >
-              Ingresar al portal
+              Ingresar a Acadeu
               <ArrowRight size={16} className="ml-2" />
             </a>
           </div>

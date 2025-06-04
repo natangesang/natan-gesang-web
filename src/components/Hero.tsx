@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 
 const Hero = () => {
@@ -62,11 +61,8 @@ const Hero = () => {
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#niveles" className="btn-primary bg-natan-orange hover:bg-natan-orange/90">
-              Conocé nuestros niveles
-            </a>
-            <a href="#contacto" className="btn-primary bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/40">
+          <div className="flex justify-center">
+            <a href="#contacto" className="btn-primary bg-natan-orange hover:bg-natan-orange/90 text-xl px-8 py-4">
               Contactanos
             </a>
           </div>
