@@ -52,8 +52,16 @@ const Hero = () => {
 
       <div ref={heroRef} className="container-section text-center text-white relative z-10 opacity-0 translate-y-10 transition-all duration-1000">
         <div className="max-w-6xl mx-auto px-[24px] py-[24px]">
-          <h1 className="heading-1 mb-8 drop-shadow-lg">
-            Escuela Internacional <span className="text-natan-yellow">Natan Gesang</span>
+          <h1 className="mb-8 drop-shadow-lg">
+            <span className="block text-4xl md:text-5xl lg:text-6xl font-bold font-serif tracking-wide">
+              ESCUELA INTERNACIONAL
+            </span>
+            <span className="block text-5xl md:text-6xl lg:text-7xl font-bold font-serif tracking-wider text-natan-yellow mt-2" style={{
+              textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
+              letterSpacing: '0.1em'
+            }}>
+              NATAN GESANG
+            </span>
           </h1>
           
           {/* Mensaje destacado principal */}
