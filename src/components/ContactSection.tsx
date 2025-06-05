@@ -1,9 +1,52 @@
 
 import React from 'react';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { contactFormSchema, type ContactFormData } from '@/lib/contact-schema';
+import { useToast } from '@/hooks/use-toast';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import SocialLinks from './SocialLinks';
 
 const ContactSection = () => {
+  const { toast } = useToast();
+  const form = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      name: '',
+      email: '',
+      phone: '',
+      subject: '',
+      message: '',
+    },
+  });
+
+  const onSubmit = async (data: ContactFormData) => {
+    console.log('Submitting contact form:', data);
+    
+    try {
+      // Simulate form submission (in a real app, this would be a Supabase call)
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      toast({
+        title: "¡Mensaje enviado exitosamente!",
+        description: "Nos pondremos en contacto contigo pronto.",
+      });
+      
+      form.reset();
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Error al enviar el mensaje",
+        description: "Por favor intenta nuevamente.",
+        variant: "destructive",
+      });
+    }
+  };
+
   return (
     <section id="contacto" className="py-20 bg-white">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -69,83 +112,96 @@ const ContactSection = () => {
             </div>
           </div>
 
-          {/* Formulario de contacto */}
+          {/* Contact form with validation */}
           <div className="bg-gray-50 rounded-2xl p-8">
             <h3 className="text-2xl font-heading font-semibold mb-6 text-gray-800">Envianos un mensaje</h3>
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Nombre completo
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <FormField
+                    control={form.control}
                     name="name"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-natan-blue focus:border-transparent transition-colors"
-                    placeholder="Tu nombre completo"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Nombre completo</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Tu nombre completo" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
                   />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
+                  <FormField
+                    control={form.control}
                     name="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-natan-blue focus:border-transparent transition-colors"
-                    placeholder="tu@email.com"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Email</FormLabel>
+                        <FormControl>
+                          <Input type="email" placeholder="tu@email.com" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
                   />
                 </div>
-              </div>
 
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                  Teléfono
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
+                <FormField
+                  control={form.control}
                   name="phone"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-natan-blue focus:border-transparent transition-colors"
-                  placeholder="+54 11 1234-5678"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Teléfono</FormLabel>
+                      <FormControl>
+                        <Input type="tel" placeholder="+54 11 1234-5678" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
-              </div>
 
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                  Asunto
-                </label>
-                <input
-                  type="text"
-                  id="subject"
+                <FormField
+                  control={form.control}
                   name="subject"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-natan-blue focus:border-transparent transition-colors"
-                  placeholder="Motivo de tu consulta"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Asunto</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Motivo de tu consulta" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
-              </div>
 
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Mensaje
-                </label>
-                <textarea
-                  id="message"
+                <FormField
+                  control={form.control}
                   name="message"
-                  rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-natan-blue focus:border-transparent transition-colors resize-none"
-                  placeholder="Escribí tu mensaje aquí..."
-                ></textarea>
-              </div>
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Mensaje</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          rows={5}
+                          placeholder="Escribí tu mensaje aquí..."
+                          className="resize-none"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
 
-              <button
-                type="submit"
-                className="w-full bg-natan-blue text-white py-3 px-6 rounded-lg font-semibold hover:bg-natan-blue/90 transition-colors focus:outline-none focus:ring-2 focus:ring-natan-blue focus:ring-offset-2"
-              >
-                Enviar mensaje
-              </button>
-            </form>
+                <Button
+                  type="submit"
+                  className="w-full bg-natan-blue text-white hover:bg-natan-blue/90"
+                  disabled={form.formState.isSubmitting}
+                >
+                  {form.formState.isSubmitting ? "Enviando..." : "Enviar mensaje"}
+                </Button>
+              </form>
+            </Form>
           </div>
         </div>
       </div>
