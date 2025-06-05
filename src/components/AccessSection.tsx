@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Users, BookOpen, ArrowRight } from 'lucide-react';
+import { BookOpen, ArrowRight } from 'lucide-react';
 
 const AccessSection = () => {
   return (
@@ -17,30 +17,7 @@ const AccessSection = () => {
           <p className="text-blue-100">Plataformas digitales para nuestra comunidad educativa</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {/* Parents access */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1 border-t border-l border-white/20">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 rounded-full bg-[#F3967B] flex items-center justify-center mr-4">
-                <Users size={24} className="text-white" />
-              </div>
-              <h3 className="text-xl font-semibold">Acadeu</h3>
-            </div>
-            <p className="mb-4 text-blue-100">
-              Acceda al sistema exclusivo para padres donde podrá consultar calificaciones, 
-              comunicaciones y gestionar trámites relacionados con la educación de su hijo.
-            </p>
-            <a 
-              href="https://plataforma.acadeu.com/i/natan-gesang" 
-              target="_blank"
-              rel="noopener noreferrer" 
-              className="inline-flex items-center font-medium text-[#F3967B] hover:text-white transition-colors"
-            >
-              Ingresar a Acadeu
-              <ArrowRight size={16} className="ml-2" />
-            </a>
-          </div>
-          
+        <div className="grid grid-cols-1 gap-6 max-w-2xl mx-auto">
           {/* Classroom access */}
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1 border-t border-l border-white/20">
             <div className="flex items-center mb-4">

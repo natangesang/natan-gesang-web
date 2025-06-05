@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Star } from 'lucide-react';
+import { Star, Heart } from 'lucide-react';
 
 const TemploSection = () => {
   return (
@@ -55,8 +55,7 @@ const TemploSection = () => {
           </div>
         </div>
 
-        {/* Nueva imagen del templo */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
           <div className="relative order-2 md:order-1">
             <div className="aspect-video bg-natan-blue/10 rounded-xl overflow-hidden relative">
               <img
@@ -88,6 +87,22 @@ const TemploSection = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+
+        {/* Nueva sección de celebraciones especiales */}
+        <div className="mt-16">
+          <Card className="glass-card overflow-hidden border-none bg-white/70">
+            <CardContent className="p-8 text-center">
+              <div className="flex items-center justify-center mb-6 text-natan-blue">
+                <Heart className="mr-2" size={32} />
+                <h3 className="text-2xl font-bold">Honra tus Momentos Especiales con Nosotros</h3>
+              </div>
+              <p className="text-lg text-gray-700 max-w-4xl mx-auto">
+                Reserva tu fecha para Bar y Bat Mitzvah, Brit Milá, Simjat Bat, compromisos, casamientos y otros eventos significativos.
+              </p>
+              <a href="#contacto" className="btn-primary mt-6 inline-block">Reservar tu fecha</a>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

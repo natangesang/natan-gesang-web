@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import HeroCarousel from './HeroCarousel';
 const Hero = () => {
@@ -52,7 +53,7 @@ const Hero = () => {
           {/* Mensaje destacado principal */}
           <div className="mb-8 p-8 bg-white/15 backdrop-blur-md rounded-3xl border border-white/30">
             <p className="text-3xl md:text-4xl font-bold leading-relaxed text-white drop-shadow-lg">
-              El mejor <span className="bg-white/20 px-3 py-1 rounded-lg text-natan-blue">comienzo</span> para un gran <span className="text-natan-yellow bg-white/20 px-3 py-1 rounded-lg">futuro</span>
+              El mejor <span className="bg-white/20 px-3 py-1 rounded-lg text-natan-blue">comienzo</span> para un gran <span className="text-natan-blue bg-white/20 px-3 py-1 rounded-lg">futuro</span>
             </p>
           </div>
 

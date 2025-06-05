@@ -50,14 +50,6 @@ const Navbar = () => {
           <NavLinks scrolled={scrolled} />
           <div className="flex space-x-3">
             <a
-              href="https://plataforma.acadeu.com/i/natan-gesang"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 rounded-lg bg-natan-blue text-white hover:bg-natan-blue/90 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 font-semibold"
-            >
-              Acadeu
-            </a>
-            <a
               href="https://classroom.google.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -100,15 +92,6 @@ const Navbar = () => {
         
         <NavLinks mobile onClick={() => setIsOpen(false)} />
         <div className="flex flex-col space-y-3 relative z-10">
-          <a
-            href="https://plataforma.acadeu.com/i/natan-gesang"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 rounded bg-natan-blue text-white hover:bg-opacity-90 transition-colors text-center"
-            onClick={() => setIsOpen(false)}
-          >
-            Acadeu
-          </a>
           <a
             href="https://classroom.google.com/"
             target="_blank"
