@@ -1,12 +1,9 @@
-
 import React, { useEffect, useRef } from 'react';
-
 const InstitucionalSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const modoGesangRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -18,12 +15,10 @@ const InstitucionalSection = () => {
     }, {
       threshold: 0.1
     });
-
     if (sectionRef.current) observer.observe(sectionRef.current);
     if (contentRef.current) observer.observe(contentRef.current);
     if (imageRef.current) observer.observe(imageRef.current);
     if (modoGesangRef.current) observer.observe(modoGesangRef.current);
-
     return () => {
       if (sectionRef.current) observer.unobserve(sectionRef.current);
       if (contentRef.current) observer.unobserve(contentRef.current);
@@ -31,9 +26,7 @@ const InstitucionalSection = () => {
       if (modoGesangRef.current) observer.unobserve(modoGesangRef.current);
     };
   }, []);
-
-  return (
-    <section id="institucional" className="py-20 bg-gray-50">
+  return <section id="institucional" className="py-20 bg-gray-50">
       <div ref={sectionRef} className="container-section opacity-0 translate-y-10 transition-all duration-700">
         <div className="text-center mb-16">
           <h2 className="heading-2 text-gray-900 mb-4">Institucional</h2>
@@ -63,7 +56,7 @@ const InstitucionalSection = () => {
 
         {/* Sección #Modo Gesang */}
         <div ref={modoGesangRef} className="opacity-0 translate-y-10 transition-all duration-700 mb-16">
-          <div className="bg-natan-blue rounded-2xl p-8 text-white">
+          <div className="rounded-2xl p-8 text-white bg-natan-yellow">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="flex-shrink-0">
                 <img src="/lovable-uploads/fa25af2d-6f72-4a65-aa50-c8967ae9d7ca.png" alt="#Modo Gesang Logo" className="w-24 h-24 md:w-32 md:h-32 object-contain" />
@@ -124,8 +117,6 @@ const InstitucionalSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default InstitucionalSection;
