@@ -1,30 +1,24 @@
-
 import React, { useEffect, useRef } from 'react';
-
 const InstitucionalSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const modoGesangRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('opacity-100');
-            entry.target.classList.remove('opacity-0', 'translate-y-10', 'translate-x-10');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100');
+          entry.target.classList.remove('opacity-0', 'translate-y-10', 'translate-x-10');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
     if (sectionRef.current) observer.observe(sectionRef.current);
     if (contentRef.current) observer.observe(contentRef.current);
     if (imageRef.current) observer.observe(imageRef.current);
     if (modoGesangRef.current) observer.observe(modoGesangRef.current);
-
     return () => {
       if (sectionRef.current) observer.unobserve(sectionRef.current);
       if (contentRef.current) observer.unobserve(contentRef.current);
@@ -32,9 +26,7 @@ const InstitucionalSection = () => {
       if (modoGesangRef.current) observer.unobserve(modoGesangRef.current);
     };
   }, []);
-
-  return (
-    <section id="institucional" className="py-20 bg-gray-50">
+  return <section id="institucional" className="py-20 bg-gray-50">
       <div ref={sectionRef} className="container-section opacity-0 translate-y-10 transition-all duration-700">
         <div className="text-center mb-16">
           <h2 className="heading-2 text-gray-900 mb-4">Institucional</h2>
@@ -57,11 +49,7 @@ const InstitucionalSection = () => {
           <div ref={imageRef} className="opacity-0 translate-x-10 transition-all duration-700 delay-200">
             <div className="relative rounded-2xl overflow-hidden shadow-natan h-[400px]">
               <div className="absolute inset-0 bg-gradient-to-br from-natan-blue/20 to-natan-skyblue/20 mix-blend-multiply z-10"></div>
-              <img
-                src="/lovable-uploads/29bbcc0b-2285-4515-8a5d-ae7595828b3c.png"
-                alt="Fachada Natan Gesang con logo institucional"
-                className="w-full h-full object-cover object-bottom"
-              />
+              <img src="/lovable-uploads/29bbcc0b-2285-4515-8a5d-ae7595828b3c.png" alt="Fachada Natan Gesang con logo institucional" className="w-full h-full object-cover object-bottom" />
             </div>
           </div>
         </div>
@@ -71,11 +59,7 @@ const InstitucionalSection = () => {
           <div className="bg-gradient-to-r from-natan-blue to-natan-skyblue rounded-2xl p-8 text-white">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="flex-shrink-0">
-                <img
-                  src="/lovable-uploads/fa25af2d-6f72-4a65-aa50-c8967ae9d7ca.png"
-                  alt="#Modo Gesang Logo"
-                  className="w-24 h-24 md:w-32 md:h-32 object-contain"
-                />
+                <img src="/lovable-uploads/fa25af2d-6f72-4a65-aa50-c8967ae9d7ca.png" alt="#Modo Gesang Logo" className="w-24 h-24 md:w-32 md:h-32 object-contain" />
               </div>
               <div className="flex-1 text-center md:text-left">
                 <h3 className="font-heading text-3xl font-bold mb-4 text-white">#Modo Gesang</h3>
@@ -93,25 +77,13 @@ const InstitucionalSection = () => {
         {/* Galería de imágenes adicionales */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           <div className="relative rounded-2xl overflow-hidden shadow-natan h-[300px]">
-            <img
-              src="/lovable-uploads/895ce9fc-4dd5-405d-92a9-7cd2601b4862.png"
-              alt="Menorah Natan Gesang"
-              className="w-full h-full object-cover"
-            />
+            <img src="/lovable-uploads/895ce9fc-4dd5-405d-92a9-7cd2601b4862.png" alt="Menorah Natan Gesang" className="w-full h-full object-cover" />
           </div>
           <div className="relative rounded-2xl overflow-hidden shadow-natan h-[300px]">
-            <img
-              src="/lovable-uploads/a9ef1105-42b3-48d6-bb76-49f998f8557a.png"
-              alt="Comunidad Natan Gesang"
-              className="w-full h-full object-cover"
-            />
+            <img src="/lovable-uploads/a9ef1105-42b3-48d6-bb76-49f998f8557a.png" alt="Comunidad Natan Gesang" className="w-full h-full object-cover" />
           </div>
           <div className="relative rounded-2xl overflow-hidden shadow-natan h-[300px]">
-            <img
-              src="/lovable-uploads/bdbfbd9a-1fbf-40a7-a847-517e3d15f818.png"
-              alt="Actividades Natan Gesang"
-              className="w-full h-full object-cover"
-            />
+            <img src="/lovable-uploads/bdbfbd9a-1fbf-40a7-a847-517e3d15f818.png" alt="Actividades Natan Gesang" className="w-full h-full object-cover" />
           </div>
         </div>
 
@@ -119,10 +91,7 @@ const InstitucionalSection = () => {
           <div className="bg-gradient-to-r from-orange-400 to-orange-500 rounded-xl p-6 text-white">
             <div className="text-center mb-4">
               <h4 className="font-heading font-bold text-2xl mb-2 text-white">MISIÓN</h4>
-              <div className="bg-white/20 rounded-lg px-4 py-2 inline-block mb-4">
-                <span className="font-semibold text-orange-200">ESCUELA INTERNACIONAL</span>
-                <span className="font-bold text-teal-300 ml-2">NATAN GESANG</span>
-              </div>
+              
             </div>
             <p className="text-white leading-relaxed">
               <strong>Educar</strong>, a partir de la <strong>cercanía y personalización</strong> logrando el <strong>éxito académico de cada estudiante</strong>, impartiendo un marco de sólidos valores y tradiciones <strong>judías</strong>, vinculadas a nuestras raíces. Contribuyendo en la incorporación de diferentes recursos <strong>tecnológicos e innovadores</strong> que permitan la formación de niños y niñas <strong>emprendedores</strong> con la habilidad y criterio resolutivo para adaptarse de forma <strong>independiente</strong> a los escenarios que les presente el futuro.
@@ -132,10 +101,7 @@ const InstitucionalSection = () => {
           <div className="bg-gradient-to-r from-orange-400 to-orange-500 rounded-xl p-6 text-white">
             <div className="text-center mb-4">
               <h4 className="font-heading font-bold text-2xl mb-2 text-white">VISIÓN</h4>
-              <div className="bg-white/20 rounded-lg px-4 py-2 inline-block mb-4">
-                <span className="font-semibold text-orange-200">ESCUELA INTERNACIONAL</span>
-                <span className="font-bold text-teal-300 ml-2">NATAN GESANG</span>
-              </div>
+              
             </div>
             <p className="text-white leading-relaxed mb-4">
               La Institución es una Comunidad abierta y dinámica, que ofrece la más alta <strong>calidad educativa</strong>, dentro de un ambiente rico en valores y tradiciones del <strong>pueblo judío</strong>, fomentando la convivencia e inclusión. Formadora de personas <strong>emprendedoras</strong>, responsables y comprometidas con la <strong>cultura, la ciencia, la tecnología y la sustentabilidad</strong>, para que generen los cambios sociales en el mundo del futuro:
@@ -153,8 +119,6 @@ const InstitucionalSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default InstitucionalSection;
