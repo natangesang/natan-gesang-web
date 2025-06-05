@@ -1,9 +1,12 @@
+
 import React, { useEffect, useRef } from 'react';
+
 const InstitucionalSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const modoGesangRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -15,10 +18,12 @@ const InstitucionalSection = () => {
     }, {
       threshold: 0.1
     });
+
     if (sectionRef.current) observer.observe(sectionRef.current);
     if (contentRef.current) observer.observe(contentRef.current);
     if (imageRef.current) observer.observe(imageRef.current);
     if (modoGesangRef.current) observer.observe(modoGesangRef.current);
+
     return () => {
       if (sectionRef.current) observer.unobserve(sectionRef.current);
       if (contentRef.current) observer.unobserve(contentRef.current);
@@ -26,7 +31,9 @@ const InstitucionalSection = () => {
       if (modoGesangRef.current) observer.unobserve(modoGesangRef.current);
     };
   }, []);
-  return <section id="institucional" className="py-20 bg-gray-50">
+
+  return (
+    <section id="institucional" className="py-20 bg-gray-50">
       <div ref={sectionRef} className="container-section opacity-0 translate-y-10 transition-all duration-700">
         <div className="text-center mb-16">
           <h2 className="heading-2 text-gray-900 mb-4">Institucional</h2>
@@ -56,7 +63,7 @@ const InstitucionalSection = () => {
 
         {/* Sección #Modo Gesang */}
         <div ref={modoGesangRef} className="opacity-0 translate-y-10 transition-all duration-700 mb-16">
-          <div className="bg-gradient-to-r from-natan-blue to-natan-skyblue rounded-2xl p-8 text-white">
+          <div className="bg-natan-blue rounded-2xl p-8 text-white">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="flex-shrink-0">
                 <img src="/lovable-uploads/fa25af2d-6f72-4a65-aa50-c8967ae9d7ca.png" alt="#Modo Gesang Logo" className="w-24 h-24 md:w-32 md:h-32 object-contain" />
@@ -91,7 +98,6 @@ const InstitucionalSection = () => {
           <div className="bg-gradient-to-r from-orange-400 to-orange-500 rounded-xl p-6 text-white">
             <div className="text-center mb-4">
               <h4 className="font-heading font-bold text-2xl mb-2 text-white">MISIÓN</h4>
-              
             </div>
             <p className="text-white leading-relaxed">
               <strong>Educar</strong>, a partir de la <strong>cercanía y personalización</strong> logrando el <strong>éxito académico de cada estudiante</strong>, impartiendo un marco de sólidos valores y tradiciones <strong>judías</strong>, vinculadas a nuestras raíces. Contribuyendo en la incorporación de diferentes recursos <strong>tecnológicos e innovadores</strong> que permitan la formación de niños y niñas <strong>emprendedores</strong> con la habilidad y criterio resolutivo para adaptarse de forma <strong>independiente</strong> a los escenarios que les presente el futuro.
@@ -101,7 +107,6 @@ const InstitucionalSection = () => {
           <div className="bg-gradient-to-r from-orange-400 to-orange-500 rounded-xl p-6 text-white">
             <div className="text-center mb-4">
               <h4 className="font-heading font-bold text-2xl mb-2 text-white">VISIÓN</h4>
-              
             </div>
             <p className="text-white leading-relaxed mb-4">
               La Institución es una Comunidad abierta y dinámica, que ofrece la más alta <strong>calidad educativa</strong>, dentro de un ambiente rico en valores y tradiciones del <strong>pueblo judío</strong>, fomentando la convivencia e inclusión. Formadora de personas <strong>emprendedoras</strong>, responsables y comprometidas con la <strong>cultura, la ciencia, la tecnología y la sustentabilidad</strong>, para que generen los cambios sociales en el mundo del futuro:
@@ -119,6 +124,8 @@ const InstitucionalSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default InstitucionalSection;

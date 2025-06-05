@@ -88,68 +88,52 @@ const EducationalLevels = () => {
         <div className="grid md:grid-cols-2 gap-10">
           <div 
             ref={cardRefs[1]}
-            className="opacity-0 translate-y-10 transition-all duration-700 delay-200 relative overflow-hidden rounded-2xl shadow-natan group"
+            className="opacity-0 translate-y-10 transition-all duration-700 delay-200 rounded-2xl shadow-natan bg-natan-skyblue text-white p-8"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-natan-skyblue/90 to-natan-blue/90 z-10"></div>
-            <img
-              src="/lovable-uploads/474b7f0e-613e-406b-a8ae-9387862874d0.png"
-              alt="Nivel Inicial"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 z-20 p-8 flex flex-col justify-end text-white">
-              <h3 className="font-heading text-2xl font-bold mb-3">Nivel Inicial</h3>
-              <p className="mb-4 text-white/90">
-                Estimulamos la curiosidad y creatividad a través del juego, creando las bases para el aprendizaje futuro en un ambiente seguro y acogedor.
-              </p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-start">
-                  <span className="bg-white/20 p-1 rounded mr-2 mt-1">✓</span>
-                  <span>Educación emocional y desarrollo socio-afectivo</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="bg-white/20 p-1 rounded mr-2 mt-1">✓</span>
-                  <span>Primeros pasos en idiomas: español, inglés y hebreo</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="bg-white/20 p-1 rounded mr-2 mt-1">✓</span>
-                  <span>Aproximación lúdica a la tecnología y ciencias</span>
-                </li>
-              </ul>
-              <a href="#contacto" className="bg-white/20 hover:bg-white/30 transition-colors duration-300 text-white py-2 px-4 rounded inline-block">Más información</a>
-            </div>
+            <h3 className="font-heading text-2xl font-bold mb-3">Nivel Inicial</h3>
+            <p className="mb-4 text-white/90">
+              Estimulamos la curiosidad y creatividad a través del juego, creando las bases para el aprendizaje futuro en un ambiente seguro y acogedor.
+            </p>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-start">
+                <span className="bg-white/20 p-1 rounded mr-2 mt-1">✓</span>
+                <span>Educación emocional y desarrollo socio-afectivo</span>
+              </li>
+              <li className="flex items-start">
+                <span className="bg-white/20 p-1 rounded mr-2 mt-1">✓</span>
+                <span>Primeros pasos en idiomas: español, inglés y hebreo</span>
+              </li>
+              <li className="flex items-start">
+                <span className="bg-white/20 p-1 rounded mr-2 mt-1">✓</span>
+                <span>Aproximación lúdica a la tecnología y ciencias</span>
+              </li>
+            </ul>
+            <a href="#contacto" className="bg-white/20 hover:bg-white/30 transition-colors duration-300 text-white py-2 px-4 rounded inline-block">Más información</a>
           </div>
 
           <div 
             ref={cardRefs[2]}
-            className="opacity-0 translate-y-10 transition-all duration-700 delay-400 relative overflow-hidden rounded-2xl shadow-natan group"
+            className="opacity-0 translate-y-10 transition-all duration-700 delay-400 rounded-2xl shadow-natan bg-natan-orange text-white p-8"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-natan-orange/90 to-natan-lightorange/90 z-10"></div>
-            <img
-              src="/lovable-uploads/9730f03f-b4e8-4147-822e-c3b4b13990b5.png"
-              alt="Nivel Primario"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 z-20 p-8 flex flex-col justify-end text-white">
-              <h3 className="font-heading text-2xl font-bold mb-3">Nivel Primario</h3>
-              <p className="mb-4 text-white/90">
-                Consolidamos conocimientos académicos mientras desarrollamos habilidades sociales, pensamiento crítico y autonomía en el aprendizaje.
-              </p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-start">
-                  <span className="bg-white/20 p-1 rounded mr-2 mt-1">✓</span>
-                  <span>Programa bilingüe integrado español-inglés</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="bg-white/20 p-1 rounded mr-2 mt-1">✓</span>
-                  <span>Cultura y tradiciones judías con hebreo</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="bg-white/20 p-1 rounded mr-2 mt-1">✓</span>
-                  <span>Proyectos tecnológicos y emprendedores prácticos</span>
-                </li>
-              </ul>
-              <a href="#contacto" className="bg-white/20 hover:bg-white/30 transition-colors duration-300 text-white py-2 px-4 rounded inline-block">Más información</a>
-            </div>
+            <h3 className="font-heading text-2xl font-bold mb-3">Nivel Primario</h3>
+            <p className="mb-4 text-white/90">
+              Consolidamos conocimientos académicos mientras desarrollamos habilidades sociales, pensamiento crítico y autonomía en el aprendizaje.
+            </p>
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-start">
+                <span className="bg-white/20 p-1 rounded mr-2 mt-1">✓</span>
+                <span>Programa bilingüe integrado español-inglés</span>
+              </li>
+              <li className="flex items-start">
+                <span className="bg-white/20 p-1 rounded mr-2 mt-1">✓</span>
+                <span>Cultura y tradiciones judías con hebreo</span>
+              </li>
+              <li className="flex items-start">
+                <span className="bg-white/20 p-1 rounded mr-2 mt-1">✓</span>
+                <span>Proyectos tecnológicos y emprendedores prácticos</span>
+              </li>
+            </ul>
+            <a href="#contacto" className="bg-white/20 hover:bg-white/30 transition-colors duration-300 text-white py-2 px-4 rounded inline-block">Más información</a>
           </div>
         </div>
       </div>
