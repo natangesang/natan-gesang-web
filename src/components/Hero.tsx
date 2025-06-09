@@ -28,7 +28,7 @@ const Hero = () => {
     <section 
       id="inicio" 
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{ backgroundColor: '#4A6FA5' }}
+      style={{ backgroundColor: '#005cb9ff' }}
     >
       {/* Marco lateral izquierdo */}
       <div 
@@ -59,8 +59,11 @@ const Hero = () => {
               className="block text-3xl md:text-4xl lg:text-5xl uppercase tracking-wider"
               style={{
                 fontFamily: 'Arial, sans-serif',
-                fontWeight: '300',
-                color: '#E8E8E8',
+                fontWeight: '700',
+                background: 'linear-gradient(45deg, #FF6B35, #F7931E)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
                 letterSpacing: '0.15em',
                 textShadow: '1px 1px 2px rgba(0,0,0,0.3)'
               }}
