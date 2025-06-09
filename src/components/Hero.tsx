@@ -27,18 +27,34 @@ const Hero = () => {
   return (
     <section 
       id="inicio" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{
-        backgroundImage: `url('/lovable-uploads/cdfa2aac-0c90-4d89-9ebf-6557d667de92.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-natan-blue"
     >
+      {/* Marco lateral izquierdo */}
+      <div 
+        className="absolute left-0 top-0 h-full w-32 md:w-48 lg:w-64 z-0"
+        style={{
+          backgroundImage: `url('/lovable-uploads/2b26748b-aa73-46e9-b676-ea998e84e233.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      />
+      
+      {/* Marco lateral derecho */}
+      <div 
+        className="absolute right-0 top-0 h-full w-32 md:w-48 lg:w-64 z-0"
+        style={{
+          backgroundImage: `url('/lovable-uploads/7a597d69-2926-4745-bd07-4eca1687e681.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      />
+
       <div ref={heroRef} className="container-section text-center text-white relative z-10 opacity-0 translate-y-10 transition-all duration-1000">
         <div className="max-w-6xl mx-auto px-[24px] py-[24px]">
           <h1 className="mb-8 drop-shadow-lg">
-            <span className="block text-4xl md:text-5xl font-light tracking-wide text-natan-coral lg:text-4xl uppercase">
+            <span className="block text-4xl md:text-5xl font-light tracking-wide text-white lg:text-4xl uppercase">
               ESCUELA INTERNACIONAL
             </span>
             <span 
@@ -53,9 +69,9 @@ const Hero = () => {
           </h1>
           
           {/* Mensaje destacado principal */}
-          <div className="mb-8 p-8 bg-natan-blue/90 backdrop-blur-md rounded-3xl border border-white/30">
+          <div className="mb-8 p-8 bg-white/10 backdrop-blur-md rounded-3xl border border-white/30">
             <p className="text-3xl md:text-4xl font-light leading-relaxed text-white drop-shadow-lg">
-              El mejor <span className="font-bold text-natan-mint">comienzo</span>, para un gran <span className="font-bold text-natan-mint">futuro</span>
+              El mejor <span className="font-bold text-white">comienzo</span>, para un gran <span className="font-bold text-white">futuro</span>
             </p>
           </div>
 
@@ -73,7 +89,7 @@ const Hero = () => {
       </div>
 
       {/* Indicador de scroll */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
         <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-white/70 rounded-full mt-2"></div>
         </div>
