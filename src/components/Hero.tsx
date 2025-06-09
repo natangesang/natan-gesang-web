@@ -27,61 +27,25 @@ const Hero = () => {
   return (
     <section 
       id="inicio" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-natan-blue"
+      className="relative min-h-screen flex flex-col justify-end overflow-hidden"
+      style={{
+        backgroundImage: `url('/lovable-uploads/248e0c9c-2226-4098-934c-1a16efa38f1d.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
     >
-      {/* Marco lateral izquierdo */}
-      <div 
-        className="absolute left-0 top-0 h-full w-32 md:w-48 lg:w-64 z-0"
-        style={{
-          backgroundImage: `url('/lovable-uploads/2b26748b-aa73-46e9-b676-ea998e84e233.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      />
-      
-      {/* Marco lateral derecho */}
-      <div 
-        className="absolute right-0 top-0 h-full w-32 md:w-48 lg:w-64 z-0"
-        style={{
-          backgroundImage: `url('/lovable-uploads/7a597d69-2926-4745-bd07-4eca1687e681.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      />
-
-      <div ref={heroRef} className="container-section text-center text-white relative z-10 opacity-0 translate-y-10 transition-all duration-1000">
-        <div className="max-w-6xl mx-auto px-[24px] py-[24px]">
-          <h1 className="mb-8 drop-shadow-lg">
-            <span className="block text-4xl md:text-5xl font-light tracking-wide text-white lg:text-4xl uppercase">
-              ESCUELA INTERNACIONAL
-            </span>
-            <span 
-              style={{
-                textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
-                letterSpacing: '0.1em'
-              }} 
-              className="block text-5xl md:text-6xl font-bold tracking-wider mt-2 text-white lg:text-8xl uppercase"
-            >
-              NATAN GESANG
-            </span>
-          </h1>
-          
-          {/* Mensaje destacado principal */}
-          <div className="mb-8 p-8 bg-white/10 backdrop-blur-md rounded-3xl border border-white/30">
-            <p className="text-3xl md:text-4xl font-light leading-relaxed text-white drop-shadow-lg">
-              El mejor <span className="font-bold text-white">comienzo</span>, para un gran <span className="font-bold text-white">futuro</span>
-            </p>
-          </div>
-
+      {/* Contenido inferior: Carrusel y botón */}
+      <div ref={heroRef} className="relative z-10 opacity-0 translate-y-10 transition-all duration-1000 pb-16">
+        <div className="max-w-6xl mx-auto px-6">
           {/* Carrusel de fotos */}
-          <div className="mb-12">
+          <div className="mb-8">
             <HeroCarousel />
           </div>
           
+          {/* Botón de contacto */}
           <div className="flex justify-center">
-            <a href="#contacto" className="btn-primary bg-natan-orange hover:bg-natan-orange/90 text-xl px-8 py-4 uppercase font-light tracking-wide">
+            <a href="#contacto" className="btn-primary bg-natan-orange hover:bg-natan-orange/90 text-xl px-8 py-4 uppercase font-light tracking-wide text-white rounded-lg shadow-lg">
               Contactanos
             </a>
           </div>
