@@ -1,8 +1,10 @@
 
 import React, { useEffect, useRef } from 'react';
 import HeroCarousel from './HeroCarousel';
+
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -14,46 +16,46 @@ const Hero = () => {
     }, {
       threshold: 0.1
     });
+
     if (heroRef.current) observer.observe(heroRef.current);
+
     return () => {
       if (heroRef.current) observer.unobserve(heroRef.current);
     };
   }, []);
-  return <section id="inicio" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-natan-blue via-natan-skyblue to-natan-lightblue overflow-hidden">
-      {/* Imágenes geométricas como fondo */}
-      <div className="absolute inset-0 z-0">
-        <img src="/lovable-uploads/1ac28933-5bab-4512-95ca-0b60e36288c9.png" alt="Geometric pattern 1" className="absolute top-0 left-0 w-1/2 h-full object-cover opacity-20" />
-        <img src="/lovable-uploads/9ba22466-79f2-490c-95ca-cfa56a615d08.png" alt="Geometric pattern 2" className="absolute top-0 right-0 w-1/2 h-full object-cover opacity-20" />
-      </div>
 
-      {/* Formas geométricas decorativas adicionales */}
-      <div className="absolute top-[20%] left-[10%] w-64 h-64 bg-white/5 rounded-full animate-float"></div>
-      <div className="absolute bottom-[30%] right-[15%] w-48 h-48 bg-natan-orange/10 rotate-45 animate-pulse-light"></div>
-      <div className="absolute top-[60%] left-[5%] w-32 h-32 bg-natan-yellow/10 rounded-full animate-float" style={{
-      animationDelay: '2s'
-    }}></div>
-      <div className="absolute bottom-[10%] right-[40%] w-40 h-40 bg-white/5 rotate-12 animate-pulse-light" style={{
-      animationDelay: '1s'
-    }}></div>
-
+  return (
+    <section 
+      id="inicio" 
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style={{
+        backgroundImage: `url('/lovable-uploads/cdfa2aac-0c90-4d89-9ebf-6557d667de92.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
       <div ref={heroRef} className="container-section text-center text-white relative z-10 opacity-0 translate-y-10 transition-all duration-1000">
         <div className="max-w-6xl mx-auto px-[24px] py-[24px]">
           <h1 className="mb-8 drop-shadow-lg">
-            <span className="block text-4xl md:text-5xl font-bold font-serif tracking-wide text-natan-coral lg:text-4xl">
+            <span className="block text-4xl md:text-5xl font-light tracking-wide text-natan-coral lg:text-4xl uppercase">
               ESCUELA INTERNACIONAL
             </span>
-            <span style={{
-            textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
-            letterSpacing: '0.1em'
-          }} className="block text-5xl md:text-6xl font-bold font-serif tracking-wider mt-2 text-slate-50 lg:text-8xl">
+            <span 
+              style={{
+                textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
+                letterSpacing: '0.1em'
+              }} 
+              className="block text-5xl md:text-6xl font-bold tracking-wider mt-2 text-white lg:text-8xl uppercase"
+            >
               NATAN GESANG
             </span>
           </h1>
           
           {/* Mensaje destacado principal */}
-          <div className="mb-8 p-8 bg-white/15 backdrop-blur-md rounded-3xl border border-white/30">
-            <p className="text-3xl md:text-4xl font-bold leading-relaxed text-white drop-shadow-lg">
-              El mejor <span className="bg-white/20 px-3 py-1 rounded-lg text-natan-blue">comienzo</span> para un gran <span className="text-natan-blue bg-white/20 px-3 py-1 rounded-lg">futuro</span>
+          <div className="mb-8 p-8 bg-natan-blue/90 backdrop-blur-md rounded-3xl border border-white/30">
+            <p className="text-3xl md:text-4xl font-light leading-relaxed text-white drop-shadow-lg">
+              El mejor <span className="font-bold text-natan-mint">comienzo</span>, para un gran <span className="font-bold text-natan-mint">futuro</span>
             </p>
           </div>
 
@@ -63,7 +65,7 @@ const Hero = () => {
           </div>
           
           <div className="flex justify-center">
-            <a href="#contacto" className="btn-primary bg-natan-orange hover:bg-natan-orange/90 text-xl px-8 py-4">
+            <a href="#contacto" className="btn-primary bg-natan-orange hover:bg-natan-orange/90 text-xl px-8 py-4 uppercase font-light tracking-wide">
               Contactanos
             </a>
           </div>
@@ -76,6 +78,8 @@ const Hero = () => {
           <div className="w-1 h-3 bg-white/70 rounded-full mt-2"></div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
