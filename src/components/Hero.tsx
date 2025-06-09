@@ -27,7 +27,8 @@ const Hero = () => {
   return (
     <section 
       id="inicio" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-natan-blue"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style={{ backgroundColor: '#4A6FA5' }}
     >
       {/* Marco lateral izquierdo */}
       <div 
@@ -54,15 +55,27 @@ const Hero = () => {
       <div ref={heroRef} className="container-section text-center text-white relative z-10 opacity-0 translate-y-10 transition-all duration-1000">
         <div className="max-w-6xl mx-auto px-[24px] py-[24px]">
           <h1 className="mb-8 drop-shadow-lg">
-            <span className="block text-4xl md:text-5xl font-light tracking-wide text-white lg:text-4xl uppercase">
+            <span 
+              className="block text-3xl md:text-4xl lg:text-5xl uppercase tracking-wider"
+              style={{
+                fontFamily: 'Arial, sans-serif',
+                fontWeight: '300',
+                color: '#E8E8E8',
+                letterSpacing: '0.15em',
+                textShadow: '1px 1px 2px rgba(0,0,0,0.3)'
+              }}
+            >
               ESCUELA INTERNACIONAL
             </span>
             <span 
+              className="block text-5xl md:text-6xl lg:text-8xl uppercase mt-2"
               style={{
-                textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
-                letterSpacing: '0.1em'
-              }} 
-              className="block text-5xl md:text-6xl font-bold tracking-wider mt-2 text-white lg:text-8xl uppercase"
+                fontFamily: 'Impact, Arial Black, sans-serif',
+                fontWeight: '900',
+                color: '#FFFFFF',
+                letterSpacing: '0.05em',
+                textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
+              }}
             >
               NATAN GESANG
             </span>
@@ -71,7 +84,7 @@ const Hero = () => {
           {/* Mensaje destacado principal */}
           <div className="mb-8 p-8 bg-white/10 backdrop-blur-md rounded-3xl border border-white/30">
             <p className="text-3xl md:text-4xl font-light leading-relaxed text-white drop-shadow-lg">
-              El mejor <span className="font-bold text-white">comienzo</span>, para un gran <span className="font-bold text-white">futuro</span>
+              El mejor <span className="font-bold" style={{ color: '#4DC295' }}>comienzo</span>, para un gran <span className="font-bold" style={{ color: '#8A65C9' }}>futuro</span>
             </p>
           </div>
 
