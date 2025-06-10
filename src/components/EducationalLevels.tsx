@@ -37,8 +37,16 @@ const EducationalLevels = () => {
     <section id="niveles" className="py-20 bg-gray-50">
       <div ref={sectionRef} className="container-section opacity-0 translate-y-10 transition-all duration-700">
         <div className="text-center mb-16">
-          <h2 className="heading-2 text-gray-900 mb-4">Niveles Educativos</h2>
-          <p className="subtitle mx-auto">
+          <h2 
+            className="heading-2 text-gray-900 mb-4"
+            style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+          >
+            Niveles Educativos
+          </h2>
+          <p 
+            className="subtitle mx-auto"
+            style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+          >
             Ofrecemos una educación integral en todos los niveles, adaptada a cada etapa del desarrollo
           </p>
         </div>
@@ -50,15 +58,24 @@ const EducationalLevels = () => {
         >
           <div className="bg-gradient-to-r from-natan-purple to-natan-blue rounded-2xl overflow-hidden shadow-natan">
             <div className="p-8 md:p-12 text-white">
-              <h3 className="font-heading text-3xl font-bold mb-4 text-center">Abordaje Educativo y Pedagógico</h3>
-              <p className="text-xl text-center mb-6 text-white/90">
-                Educación basada en el modelo STEAM con valores judíos, promoviendo la independencia y el pensamiento crítico desde los 12 meses.
+              <h3 
+                className="font-heading text-3xl font-bold mb-4 text-center"
+                style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+              >
+                Abordaje Educativo y Pedagógico
+              </h3>
+              <p 
+                className="text-xl text-center mb-6 text-white/90"
+                style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+              >
+                Educación basada en el modelo STEAM con valores judíos, promoviendo la independencia y el pensamiento crítico desde sala de 1 año.
               </p>
               
               <div className="text-center">
                 <button 
                   onClick={() => setExpandedModule(!expandedModule)}
                   className="bg-white/20 hover:bg-white/30 transition-colors duration-300 text-white py-3 px-6 rounded-lg inline-flex items-center gap-2"
+                  style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
                 >
                   {expandedModule ? 'Leer menos' : 'Leer más'}
                   <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${expandedModule ? 'rotate-180' : ''}`} />
@@ -66,9 +83,12 @@ const EducationalLevels = () => {
               </div>
 
               {expandedModule && (
-                <div className="mt-8 space-y-4 text-white/95 leading-relaxed animate-slide-in">
+                <div 
+                  className="mt-8 space-y-4 text-white/95 leading-relaxed animate-slide-in"
+                  style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+                >
                   <p>
-                    Somos una comunidad dinámica y en constante transformación. La convivencia, el respeto, y la inclusión son parte de nuestros valores con los qué acompañamos a nuestros alumnos/as desde los 12 meses en su recorrido y crecimiento durante todo el nivel Inicial y también durante el nivel Primario.
+                    Somos una comunidad dinámica y en constante transformación. La convivencia, el respeto, y la inclusión son parte de nuestros valores con los qué acompañamos a nuestros alumnos/as desde sala de 1 año en su recorrido y crecimiento durante todo el nivel Inicial y también durante el nivel Primario.
                   </p>
                   <p>
                     Basamos nuestra educación en el modelo pedagógico STEAM (Science, Technology, Engineering and Mathematics), apuntando al acceso de conocimientos de manera integrada. El modelo busca resolver problemas a través de la promoción de la independencia, el trabajo colaborativo y asertivo, la valoración de diferentes puntos de vista, la innovación y el desarrollo de talentos. Promueve la alfabetización científica a partir del desarrollo del pensamiento crítico y nuevas habilidades.
@@ -90,50 +110,90 @@ const EducationalLevels = () => {
             ref={cardRefs[1]}
             className="opacity-0 translate-y-10 transition-all duration-700 delay-200 rounded-2xl shadow-natan bg-natan-skyblue text-white p-8"
           >
-            <h3 className="font-heading text-2xl font-bold mb-3">Nivel Inicial</h3>
-            <p className="mb-4 text-white/90">
+            <h3 
+              className="font-heading text-2xl font-bold mb-3"
+              style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+            >
+              Nivel Inicial
+            </h3>
+            <p 
+              className="mb-4 text-white/90"
+              style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+            >
               Estimulamos la curiosidad y creatividad a través del juego, creando las bases para el aprendizaje futuro en un ambiente seguro y acogedor.
             </p>
             <ul className="space-y-2 mb-6">
               <li className="flex items-start">
                 <span className="bg-white/20 p-1 rounded mr-2 mt-1">✓</span>
-                <span>Educación emocional y desarrollo socio-afectivo</span>
+                <span style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}>
+                  Educación emocional y desarrollo socio-afectivo
+                </span>
               </li>
               <li className="flex items-start">
                 <span className="bg-white/20 p-1 rounded mr-2 mt-1">✓</span>
-                <span>Primeros pasos en idiomas: español, inglés y hebreo</span>
+                <span style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}>
+                  Primeros pasos en idiomas: español, inglés y hebreo
+                </span>
               </li>
               <li className="flex items-start">
                 <span className="bg-white/20 p-1 rounded mr-2 mt-1">✓</span>
-                <span>Aproximación lúdica a la tecnología y ciencias</span>
+                <span style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}>
+                  Aproximación lúdica a la tecnología y ciencias
+                </span>
               </li>
             </ul>
-            <a href="#contacto" className="bg-white/20 hover:bg-white/30 transition-colors duration-300 text-white py-2 px-4 rounded inline-block">Más información</a>
+            <a 
+              href="#contacto" 
+              className="bg-white/20 hover:bg-white/30 transition-colors duration-300 text-white py-2 px-4 rounded inline-block"
+              style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+            >
+              Más información
+            </a>
           </div>
 
           <div 
             ref={cardRefs[2]}
             className="opacity-0 translate-y-10 transition-all duration-700 delay-400 rounded-2xl shadow-natan bg-natan-orange text-white p-8"
           >
-            <h3 className="font-heading text-2xl font-bold mb-3">Nivel Primario</h3>
-            <p className="mb-4 text-white/90">
+            <h3 
+              className="font-heading text-2xl font-bold mb-3"
+              style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+            >
+              Nivel Primario
+            </h3>
+            <p 
+              className="mb-4 text-white/90"
+              style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+            >
               Consolidamos conocimientos académicos mientras desarrollamos habilidades sociales, pensamiento crítico y autonomía en el aprendizaje.
             </p>
             <ul className="space-y-2 mb-6">
               <li className="flex items-start">
                 <span className="bg-white/20 p-1 rounded mr-2 mt-1">✓</span>
-                <span>Programa bilingüe integrado español-inglés</span>
+                <span style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}>
+                  Programa bilingüe integrado español-inglés
+                </span>
               </li>
               <li className="flex items-start">
                 <span className="bg-white/20 p-1 rounded mr-2 mt-1">✓</span>
-                <span>Cultura y tradiciones judías con hebreo</span>
+                <span style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}>
+                  Cultura y tradiciones judías con hebreo
+                </span>
               </li>
               <li className="flex items-start">
                 <span className="bg-white/20 p-1 rounded mr-2 mt-1">✓</span>
-                <span>Proyectos tecnológicos y emprendedores prácticos</span>
+                <span style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}>
+                  Proyectos tecnológicos y prácticos para emprendedores
+                </span>
               </li>
             </ul>
-            <a href="#contacto" className="bg-white/20 hover:bg-white/30 transition-colors duration-300 text-white py-2 px-4 rounded inline-block">Más información</a>
+            <a 
+              href="#contacto" 
+              className="bg-white/20 hover:bg-white/30 transition-colors duration-300 text-white py-2 px-4 rounded inline-block"
+              style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+            >
+              Más información
+            </a>
           </div>
         </div>
       </div>

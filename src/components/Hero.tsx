@@ -60,7 +60,7 @@ const Hero = () => {
             <h2 
               className="block text-lg md:text-xl lg:text-2xl uppercase mb-4"
               style={{
-                fontFamily: 'Montserrat, Roboto, "Open Sans", sans-serif',
+                fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif',
                 fontWeight: '500',
                 color: '#F6A623',
                 letterSpacing: '1px',
@@ -74,7 +74,7 @@ const Hero = () => {
             <h1 
               className="block text-4xl md:text-6xl lg:text-7xl uppercase"
               style={{
-                fontFamily: 'Montserrat, Roboto, "Open Sans", sans-serif',
+                fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif',
                 fontWeight: '800',
                 color: '#FFFFFF',
                 letterSpacing: '0px',
@@ -100,7 +100,7 @@ const Hero = () => {
               <p 
                 className="text-xl md:text-2xl leading-relaxed"
                 style={{
-                  fontFamily: 'Montserrat, Lato, Roboto, "Open Sans", sans-serif',
+                  fontFamily: 'Nunito, Montserrat, Lato, Roboto, "Open Sans", sans-serif',
                   fontWeight: '600',
                   color: '#FFFFFF'
                 }}
@@ -123,7 +123,11 @@ const Hero = () => {
           </div>
           
           <div className="flex justify-center">
-            <a href="#contacto" className="btn-primary bg-natan-orange hover:bg-natan-orange/90 text-xl px-8 py-4 uppercase font-light tracking-wide">
+            <a 
+              href="#contacto" 
+              className="btn-primary bg-natan-orange hover:bg-natan-orange/90 text-xl px-8 py-4 uppercase font-light tracking-wide"
+              style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+            >
               Contactanos
             </a>
           </div>

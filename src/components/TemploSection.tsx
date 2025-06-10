@@ -12,11 +12,27 @@ const TemploSection = () => {
       
       <div className="container-section relative z-10">
         <div className="text-center mb-12">
-          <h2 className="heading-2 mb-4 inline-block relative">
+          {/* Logo del Templo */}
+          <div className="flex justify-center mb-6">
+            <img
+              src="/lovable-uploads/bfe9cd4f-11c5-477c-8124-75b2183a8847.png"
+              alt="Natan Gesang - Templo Bet Jai"
+              className="h-24 md:h-32"
+            />
+          </div>
+          <h2 
+            className="heading-2 mb-4 inline-block relative"
+            style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+          >
             Nuestro Templo
             <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-natan-orange to-natan-pink"></span>
           </h2>
-          <p className="subtitle mx-auto">Un espacio de conexión con nuestras raíces y tradiciones</p>
+          <p 
+            className="subtitle mx-auto"
+            style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+          >
+            Un espacio de conexión con nuestras raíces y tradiciones
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
@@ -25,19 +41,41 @@ const TemploSection = () => {
               <CardContent className="p-8">
                 <div className="flex items-center mb-4 text-natan-blue">
                   <Star className="mr-2" size={24} />
-                  <h3 className="text-xl font-semibold">Espacio sagrado</h3>
+                  <h3 
+                    className="text-xl font-semibold"
+                    style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+                  >
+                    Espacio sagrado
+                  </h3>
                 </div>
-                <p className="mb-4 text-gray-700">
+                <p 
+                  className="mb-4 text-gray-700"
+                  style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+                >
                   Nuestro templo es un espacio de encuentro y reflexión, donde cultivamos la conexión con nuestra herencia judía y fortalecemos los valores que nos identifican como comunidad.
                 </p>
                 <div className="flex items-center mb-4 text-natan-blue">
                   <Star className="mr-2" size={24} />
-                  <h3 className="text-xl font-semibold">Celebraciones</h3>
+                  <h3 
+                    className="text-xl font-semibold"
+                    style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+                  >
+                    Celebraciones
+                  </h3>
                 </div>
-                <p className="mb-4 text-gray-700">
+                <p 
+                  className="mb-4 text-gray-700"
+                  style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+                >
                   A lo largo del año, celebramos las festividades judías tradicionales, brindando a nuestros alumnos una experiencia rica en espiritualidad y significado cultural.
                 </p>
-                <a href="#contacto" className="btn-primary mt-4 inline-block">Conocer más</a>
+                <a 
+                  href="#contacto" 
+                  className="btn-primary mt-4 inline-block"
+                  style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+                >
+                  Conocer más
+                </a>
               </CardContent>
             </Card>
           </div>
@@ -72,16 +110,32 @@ const TemploSection = () => {
               <CardContent className="p-8">
                 <div className="flex items-center mb-4 text-natan-blue">
                   <Star className="mr-2" size={24} />
-                  <h3 className="text-xl font-semibold">Tradición y Modernidad</h3>
+                  <h3 
+                    className="text-xl font-semibold"
+                    style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+                  >
+                    Tradición y Modernidad
+                  </h3>
                 </div>
-                <p className="mb-4 text-gray-700">
+                <p 
+                  className="mb-4 text-gray-700"
+                  style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+                >
                   En nuestro templo se fusionan la tradición milenaria judía con un enfoque moderno y dinámico, creando un ambiente donde cada generación encuentra su lugar en la continuidad de nuestra herencia cultural.
                 </p>
                 <div className="flex items-center mb-4 text-natan-blue">
                   <Star className="mr-2" size={24} />
-                  <h3 className="text-xl font-semibold">Comunidad Unida</h3>
+                  <h3 
+                    className="text-xl font-semibold"
+                    style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+                  >
+                    Comunidad Unida
+                  </h3>
                 </div>
-                <p className="text-gray-700">
+                <p 
+                  className="text-gray-700"
+                  style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+                >
                   Familias de todas las edades se reúnen para compartir momentos significativos, fortaleciendo los lazos comunitarios y transmitiendo valores que trascienden generaciones.
                 </p>
               </CardContent>
@@ -95,12 +149,26 @@ const TemploSection = () => {
             <CardContent className="p-8 text-center">
               <div className="flex items-center justify-center mb-6 text-natan-blue">
                 <Heart className="mr-2" size={32} />
-                <h3 className="text-2xl font-bold">Honra tus Momentos Especiales con Nosotros</h3>
+                <h3 
+                  className="text-2xl font-bold"
+                  style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+                >
+                  Honra tus Momentos Especiales con Nosotros
+                </h3>
               </div>
-              <p className="text-lg text-gray-700 max-w-4xl mx-auto">
+              <p 
+                className="text-lg text-gray-700 max-w-4xl mx-auto"
+                style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+              >
                 Reserva tu fecha para Bar y Bat Mitzvah, Brit Milá, Simjat Bat, compromisos, casamientos y otros eventos significativos.
               </p>
-              <a href="#contacto" className="btn-primary mt-6 inline-block">Reservar tu fecha</a>
+              <a 
+                href="#contacto" 
+                className="btn-primary mt-6 inline-block"
+                style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
+              >
+                Reservar tu fecha
+              </a>
             </CardContent>
           </Card>
         </div>

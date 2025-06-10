@@ -39,7 +39,7 @@ const Navbar = () => {
           className="flex items-center gap-2 transition-transform duration-300 hover:scale-105"
         >
           <img
-            src="/lovable-uploads/ec87831b-f2ae-4525-98d0-5e29f178d93c.png"
+            src={scrolled ? "/lovable-uploads/c737b4de-ce3f-41cb-aabe-cd947e40ca20.png" : "/lovable-uploads/f747066b-5161-4334-86d4-0b5cbef9af39.png"}
             alt="Natan Gesang"
             className="h-20"
           />
@@ -139,6 +139,7 @@ const NavLinks = ({ mobile = false, scrolled = false, onClick }: NavLinksProps) 
                 : 'text-white hover:text-natan-orange'
           )}
           onClick={onClick}
+          style={{ fontFamily: 'Nunito, Montserrat, Roboto, "Open Sans", sans-serif' }}
         >
           {link.label}
         </a>

@@ -6,32 +6,32 @@ import Autoplay from 'embla-carousel-autoplay';
 const HeroCarousel = () => {
   const images = [
     {
-      src: "/lovable-uploads/03cc71a6-a920-4317-95e2-c0e696f78aa2.png",
-      alt: "Estudiantes trabajando en el aula"
+      src: "/lovable-uploads/f7fedd64-c34e-49db-9d54-aea4e804a611.png",
+      alt: "Estudiante sonriendo con uniforme escolar"
     },
     {
-      src: "/lovable-uploads/acd11d3c-98a1-4abb-9f90-656b6b8eb764.png",
-      alt: "Niños pequeños jugando"
+      src: "/lovable-uploads/b67ebe7c-063e-4220-8f8a-8352ec780e53.png",
+      alt: "Estudiantes con banderas"
     },
     {
-      src: "/lovable-uploads/a987e466-bf5e-4b9b-8330-63acebddbf32.png",
-      alt: "Estudiante usando tecnología"
+      src: "/lovable-uploads/914ae14d-bea0-4a71-a047-aeb5a6fc1499.png",
+      alt: "Estudiante trabajando con tecnología"
     },
     {
-      src: "/lovable-uploads/35fff9fe-971a-434d-b55d-38aa0c5da73b.png",
-      alt: "Estudiantes de secundaria"
+      src: "/lovable-uploads/34522029-35c0-4688-9ff4-724f4c5ca816.png",
+      alt: "Niños pequeños con bandera de Israel"
     },
     {
-      src: "/lovable-uploads/c18d95bf-40cb-4e12-a6a5-8ed0460ef00e.png",
-      alt: "Alumnos con materiales educativos"
+      src: "/lovable-uploads/eccef3ff-23f9-4f8e-b3c7-5d97231f71d8.png",
+      alt: "Familia en evento escolar"
     },
     {
-      src: "/lovable-uploads/7f16cd76-2abe-4248-8cf6-a40c0336efb4.png",
-      alt: "Niño pequeño en el aula"
+      src: "/lovable-uploads/3e3f3bf5-7600-416c-a206-6764f3f5638c.png",
+      alt: "Estudiante adolescente sonriendo"
     },
     {
-      src: "/lovable-uploads/929ebeee-2cbf-482b-8bc5-8a19dc47bcbe.png",
-      alt: "Familia en ceremonia de graduación"
+      src: "/lovable-uploads/048ef626-dd3a-45c5-8bac-88d9c97b3ad8.png",
+      alt: "Estudiantes en aula con materiales educativos"
     },
     {
       src: "/lovable-uploads/dd275cdc-2e41-4551-b363-dff0677c2f48.png",
