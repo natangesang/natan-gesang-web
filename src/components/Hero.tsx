@@ -91,7 +91,9 @@ const Hero = () => {
             <div 
               className="px-8 py-6 rounded-full max-w-2xl"
               style={{
-                background: 'linear-gradient(135deg, #F6A623 0%, #F07D3D 50%, #FF8A65 100%)',
+                background: 'linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%)',
+                border: '1px solid rgba(255,255,255,0.2)',
+                backdropFilter: 'blur(10px)',
                 boxShadow: '0 8px 32px rgba(0,0,0,0.3)'
               }}
             >
@@ -108,7 +110,7 @@ const Hero = () => {
                   comienzo
                 </span>
                 , para un gran{' '}
-                <span style={{ color: '#2B3F8C', fontWeight: '700' }}>
+                <span style={{ color: '#A167D5', fontWeight: '700' }}>
                   futuro
                 </span>
               </p>
