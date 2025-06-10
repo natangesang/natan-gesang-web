@@ -91,7 +91,7 @@ const Hero = () => {
             <div 
               className="px-8 py-6 rounded-full max-w-2xl"
               style={{
-                background: 'linear-gradient(135deg, #2B3F8C 0%, #6E57A0 100%)',
+                background: 'linear-gradient(135deg, #F6A623 0%, #F07D3D 50%, #FF8A65 100%)',
                 boxShadow: '0 8px 32px rgba(0,0,0,0.3)'
               }}
             >
@@ -99,7 +99,8 @@ const Hero = () => {
                 className="text-xl md:text-2xl leading-relaxed"
                 style={{
                   fontFamily: 'Montserrat, Lato, Roboto, "Open Sans", sans-serif',
-                  fontWeight: '600'
+                  fontWeight: '600',
+                  color: '#FFFFFF'
                 }}
               >
                 El mejor{' '}
@@ -107,7 +108,7 @@ const Hero = () => {
                   comienzo
                 </span>
                 , para un gran{' '}
-                <span style={{ color: '#A167D5', fontWeight: '700' }}>
+                <span style={{ color: '#2B3F8C', fontWeight: '700' }}>
                   futuro
                 </span>
               </p>
