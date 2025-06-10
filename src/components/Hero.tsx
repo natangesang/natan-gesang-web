@@ -54,41 +54,64 @@ const Hero = () => {
 
       <div ref={heroRef} className="container-section text-center text-white relative z-10 opacity-0 translate-y-10 transition-all duration-1000">
         <div className="max-w-6xl mx-auto px-[24px] py-[24px]">
-          <h1 className="mb-8 drop-shadow-lg">
-            <span 
-              className="block text-3xl md:text-4xl lg:text-5xl uppercase tracking-wider"
+          {/* Main Title Section */}
+          <div className="mb-8">
+            {/* ESCUELA INTERNACIONAL - Subtitle */}
+            <h2 
+              className="block text-lg md:text-xl lg:text-2xl uppercase mb-4"
               style={{
-                fontFamily: 'Arial, sans-serif',
-                fontWeight: '700',
-                background: 'linear-gradient(45deg, #FF6B35, #F7931E)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                letterSpacing: '0.15em',
+                fontFamily: 'Montserrat, Roboto, "Open Sans", sans-serif',
+                fontWeight: '500',
+                color: '#F6A623',
+                letterSpacing: '1px',
                 textShadow: '1px 1px 2px rgba(0,0,0,0.3)'
               }}
             >
               ESCUELA INTERNACIONAL
-            </span>
-            <span 
-              className="block text-5xl md:text-6xl lg:text-8xl uppercase mt-2"
+            </h2>
+            
+            {/* NATAN GESANG - Main Title */}
+            <h1 
+              className="block text-4xl md:text-6xl lg:text-7xl uppercase"
               style={{
-                fontFamily: 'Impact, Arial Black, sans-serif',
-                fontWeight: '900',
+                fontFamily: 'Montserrat, Roboto, "Open Sans", sans-serif',
+                fontWeight: '800',
                 color: '#FFFFFF',
-                letterSpacing: '0.05em',
-                textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
+                letterSpacing: '0px',
+                textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
+                lineHeight: '1.1'
               }}
             >
               NATAN GESANG
-            </span>
-          </h1>
+            </h1>
+          </div>
           
-          {/* Mensaje destacado principal */}
-          <div className="mb-8 p-8 bg-white/10 backdrop-blur-md rounded-3xl border border-white/30">
-            <p className="text-3xl md:text-4xl font-light leading-relaxed text-white drop-shadow-lg">
-              El mejor <span className="font-bold" style={{ color: '#4DC295' }}>comienzo</span>, para un gran <span className="font-bold" style={{ color: '#8A65C9' }}>futuro</span>
-            </p>
+          {/* Tagline with highlighted words */}
+          <div className="mb-12 flex justify-center">
+            <div 
+              className="px-8 py-6 rounded-full max-w-2xl"
+              style={{
+                background: 'linear-gradient(135deg, #2B3F8C 0%, #6E57A0 100%)',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.3)'
+              }}
+            >
+              <p 
+                className="text-xl md:text-2xl leading-relaxed"
+                style={{
+                  fontFamily: 'Montserrat, Lato, Roboto, "Open Sans", sans-serif',
+                  fontWeight: '600'
+                }}
+              >
+                El mejor{' '}
+                <span style={{ color: '#38C4B2', fontWeight: '700' }}>
+                  comienzo
+                </span>
+                , para un gran{' '}
+                <span style={{ color: '#A167D5', fontWeight: '700' }}>
+                  futuro
+                </span>
+              </p>
+            </div>
           </div>
 
           {/* Carrusel de fotos */}
