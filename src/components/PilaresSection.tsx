@@ -70,7 +70,12 @@ const PilaresSection = () => {
     backgroundColor: '#005cb9ff'
   }}>
       {/* Marco lateral izquierdo - esquina superior izquierda */}
-      
+      <div style={{
+      backgroundImage: `url('/lovable-uploads/b4592971-4c65-422b-bda1-f926b19d3c33.png')`,
+      backgroundSize: '120px 620px',
+      backgroundPosition: 'left top',
+      backgroundRepeat: 'no-repeat'
+    }} className="absolute left-0 top-0 w-[75px] h-[500px] z-0" />
       
       {/* Marco lateral derecho - esquina inferior derecha */}
       <div style={{
