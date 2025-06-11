@@ -70,20 +70,10 @@ const PilaresSection = () => {
     backgroundColor: '#005cb9ff'
   }}>
       {/* Marco lateral izquierdo - esquina superior izquierda */}
-      <div style={{
-      backgroundImage: `url('/lovable-uploads/b4592971-4c65-422b-bda1-f926b19d3c33.png')`,
-      backgroundSize: '120px 620px',
-      backgroundPosition: 'left top',
-      backgroundRepeat: 'no-repeat'
-    }} className="absolute left-0 top-0 w-[75px] h-[500px] z-0" />
+      
       
       {/* Marco lateral derecho - esquina inferior derecha */}
-      <div style={{
-      backgroundImage: `url('/lovable-uploads/73c1bf17-f538-4091-a067-91d395569c35.png')`,
-      backgroundSize: '120px 620px',
-      backgroundPosition: 'right bottom',
-      backgroundRepeat: 'no-repeat'
-    }} className="absolute right-0 bottom-0 w-[75px] h-[500px] z-0" />
+      
 
       <div ref={sectionRef} className="container-section opacity-0 translate-y-10 transition-all duration-700 relative z-10">
         <div className="text-center mb-16">
