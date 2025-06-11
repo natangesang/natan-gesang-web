@@ -1,21 +1,14 @@
 import React from 'react';
 import { MapPin, Phone, Mail } from 'lucide-react';
 import SocialLinks from './SocialLinks';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-natan-blue text-white">
+  return <footer className="bg-natan-blue text-white">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
             <div className="mb-5">
-              <img
-                src="/lovable-uploads/0b89df56-adf1-4f1a-9bf6-a7cd0436fe2a.png"
-                alt="Natan Gesang"
-                className="h-16 bg-white rounded-md p-1"
-              />
+              <img alt="Natan Gesang" className="h-16 bg-white rounded-md p-1" src="/lovable-uploads/c8381242-59b8-42e8-bee0-4010df6d8c93.png" />
             </div>
             <p className="text-blue-100 mb-6">
               Formando emprendedores con valores judíos e innovación tecnológica para los desafíos del mañana.
@@ -100,8 +93,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
