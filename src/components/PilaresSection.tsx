@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
@@ -125,24 +124,24 @@ const PilaresSection = () => {
       className="relative py-20 overflow-hidden"
       style={{ backgroundColor: '#005cb9ff' }}
     >
-      {/* Marco lateral izquierdo - en margen superior */}
+      {/* Marco lateral izquierdo - esquina superior izquierda */}
       <div 
-        className="absolute left-0 top-0 w-24 h-32 md:w-32 md:h-40 lg:w-40 lg:h-48 z-0"
+        className="absolute left-0 top-0 w-40 h-48 z-0"
         style={{
           backgroundImage: `url('/lovable-uploads/35729a08-1f67-4adf-86b7-b4d711376679.png')`,
           backgroundSize: 'contain',
-          backgroundPosition: 'center',
+          backgroundPosition: 'left top',
           backgroundRepeat: 'no-repeat'
         }}
       />
       
-      {/* Marco lateral derecho - en margen inferior */}
+      {/* Marco lateral derecho - esquina inferior derecha */}
       <div 
-        className="absolute right-0 bottom-0 w-24 h-32 md:w-32 md:h-40 lg:w-40 lg:h-48 z-0"
+        className="absolute right-0 bottom-0 w-40 h-48 z-0"
         style={{
           backgroundImage: `url('/lovable-uploads/2b4572d6-4ad1-4730-832c-5afacb67e73d.png')`,
           backgroundSize: 'contain',
-          backgroundPosition: 'center',
+          backgroundPosition: 'right bottom',
           backgroundRepeat: 'no-repeat'
         }}
       />
