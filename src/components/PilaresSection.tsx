@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
@@ -126,10 +127,10 @@ const PilaresSection = () => {
     >
       {/* Marco lateral izquierdo - esquina superior izquierda */}
       <div 
-        className="absolute left-0 top-0 w-40 h-48 z-0"
+        className="absolute left-0 top-0 w-[120px] h-[620px] z-0"
         style={{
-          backgroundImage: `url('/lovable-uploads/35729a08-1f67-4adf-86b7-b4d711376679.png')`,
-          backgroundSize: 'contain',
+          backgroundImage: `url('/lovable-uploads/b4592971-4c65-422b-bda1-f926b19d3c33.png')`,
+          backgroundSize: '120px 620px',
           backgroundPosition: 'left top',
           backgroundRepeat: 'no-repeat'
         }}
@@ -137,10 +138,10 @@ const PilaresSection = () => {
       
       {/* Marco lateral derecho - esquina inferior derecha */}
       <div 
-        className="absolute right-0 bottom-0 w-40 h-48 z-0"
+        className="absolute right-0 bottom-0 w-[120px] h-[620px] z-0"
         style={{
-          backgroundImage: `url('/lovable-uploads/2b4572d6-4ad1-4730-832c-5afacb67e73d.png')`,
-          backgroundSize: 'contain',
+          backgroundImage: `url('/lovable-uploads/73c1bf17-f538-4091-a067-91d395569c35.png')`,
+          backgroundSize: '120px 620px',
           backgroundPosition: 'right bottom',
           backgroundRepeat: 'no-repeat'
         }}

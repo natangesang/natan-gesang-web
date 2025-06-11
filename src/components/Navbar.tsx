@@ -89,32 +89,33 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden flex items-center"
+          className="md:hidden flex items-center z-50 relative"
           onClick={toggleMenu}
           aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
         >
-          {isOpen ? <X size={24} color={scrolled ? "#0057A5" : "#fff"} /> : <Menu size={24} color={scrolled ? "#0057A5" : "#fff"} />}
+          {isOpen ? <X size={24} color="#fff" /> : <Menu size={24} color={scrolled ? "#0057A5" : "#fff"} />}
         </button>
       </div>
 
-      {/* Mobile Navigation with geometric shapes */}
+      {/* Mobile Navigation with blue background */}
       <div
         className={cn(
-          'fixed inset-0 bg-white z-40 flex flex-col justify-center items-center space-y-8 p-4 transition-all duration-500 md:hidden',
+          'fixed inset-0 flex flex-col justify-center items-center space-y-8 p-4 transition-all duration-500 md:hidden z-40',
+          'bg-natan-blue',
           isOpen ? 'opacity-100 top-0' : 'opacity-0 top-[-100%] pointer-events-none'
         )}
       >
         {/* Formas geométricas decorativas */}
-        <div className="absolute top-[10%] left-[10%] w-12 h-24 bg-natan-blue/10 rounded-l-full"></div>
+        <div className="absolute top-[10%] left-[10%] w-12 h-24 bg-white/10 rounded-l-full"></div>
         <div className="absolute top-[20%] right-[10%] w-16 h-16 bg-natan-yellow/20 rounded-full"></div>
         <div className="absolute bottom-[15%] left-[20%] w-20 h-10 bg-natan-pink/10 rounded-t-full"></div>
         <div className="absolute bottom-[30%] right-[15%] w-24 h-12 bg-natan-teal/10 rounded-b-full"></div>
         <div className="absolute top-[60%] left-[15%] w-12 h-12 bg-natan-purple/10"></div>
         <div className="absolute top-[40%] right-[5%] w-8 h-32 bg-natan-skyblue/10"></div>
         
-        <div className="absolute bottom-[10%] right-[25%] w-24 h-1 bg-natan-blue/20"></div>
-        <div className="absolute bottom-[8%] right-[25%] w-24 h-1 bg-natan-blue/20"></div>
-        <div className="absolute bottom-[6%] right-[25%] w-24 h-1 bg-natan-blue/20"></div>
+        <div className="absolute bottom-[10%] right-[25%] w-24 h-1 bg-white/20"></div>
+        <div className="absolute bottom-[8%] right-[25%] w-24 h-1 bg-white/20"></div>
+        <div className="absolute bottom-[6%] right-[25%] w-24 h-1 bg-white/20"></div>
         
         <NavLinks mobile onClick={() => setIsOpen(false)} />
         <div className="flex flex-col space-y-3 relative z-10">
@@ -158,7 +159,7 @@ const NavLinks = ({ mobile = false, scrolled = false, onClick }: NavLinksProps) 
           href={link.href}
           className={cn(
             mobile
-              ? 'text-xl font-bold py-2 text-natan-blue hover:text-natan-orange transition-all duration-300 hover:scale-105'
+              ? 'text-xl font-bold py-2 text-white hover:text-natan-orange transition-all duration-300 hover:scale-105'
               : 'font-bold text-lg transition-all duration-300 relative drop-shadow-lg after:absolute after:bottom-0 after:left-0 after:right-0 after:h-1 after:bg-natan-orange after:origin-right after:scale-x-0 after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100 hover:scale-105',
               scrolled 
                 ? 'text-natan-blue hover:text-natan-orange' 
