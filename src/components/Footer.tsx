@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { MapPin, Phone, Mail } from 'lucide-react';
 import SocialLinks from './SocialLinks';
@@ -13,7 +12,7 @@ const Footer = () => {
           <div>
             <div className="mb-5">
               <img
-                src="/lovable-uploads/ec87831b-f2ae-4525-98d0-5e29f178d93c.png"
+                src="/lovable-uploads/0b89df56-adf1-4f1a-9bf6-a7cd0436fe2a.png"
                 alt="Natan Gesang"
                 className="h-16 bg-white rounded-md p-1"
               />

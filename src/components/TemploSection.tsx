@@ -1,8 +1,10 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Star, Heart } from 'lucide-react';
+
 const TemploSection = () => {
-  return <section id="templo" className="relative overflow-hidden bg-gradient-to-b from-white to-blue-50 py-20">
+  return (
+    <section id="templo" className="relative overflow-hidden bg-gradient-to-b from-white to-blue-50 py-20">
       {/* Decorative geometric shapes */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-natan-purple opacity-10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-natan-teal opacity-10 -translate-x-1/3 translate-y-1/3"></div>
@@ -61,7 +63,7 @@ const TemploSection = () => {
           </div>
           <div className="relative">
             <div className="aspect-video bg-natan-blue/10 rounded-xl overflow-hidden relative">
-              <img src="/lovable-uploads/1f3baff7-ff45-4554-bb26-7540d716dd66.png" alt="Ceremonia en el Templo Natan Gesang" className="w-full h-full object-cover" />
+              <img src="/lovable-uploads/c0abaf58-9a55-4d64-a0cb-0a154bb46beb.png" alt="Ceremonia en el Templo Natan Gesang" className="w-full h-full object-cover" />
             </div>
             {/* Geometric accent */}
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-natan-yellow rounded-full opacity-30 z-0"></div>
@@ -72,7 +74,7 @@ const TemploSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
           <div className="relative order-2 md:order-1">
             <div className="aspect-video bg-natan-blue/10 rounded-xl overflow-hidden relative">
-              <img src="/lovable-uploads/f078073a-8b21-4bb6-9710-0f9a4099ea05.png" alt="Elementos ceremoniales del Templo" className="w-full h-full object-cover" />
+              <img src="/lovable-uploads/4bdcb0e4-712f-45f0-8b64-9269903cf406.png" alt="Elementos ceremoniales del Templo" className="w-full h-full object-cover" />
             </div>
             <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-natan-teal rounded-full opacity-30 z-0"></div>
             <div className="absolute -top-4 -right-4 w-16 h-16 bg-natan-orange rounded-md opacity-30 z-0 rotate-12"></div>
@@ -137,6 +139,8 @@ const TemploSection = () => {
           </Card>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default TemploSection;

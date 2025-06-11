@@ -34,11 +34,11 @@ const HeroCarousel = () => {
       alt: "Estudiantes en aula con materiales educativos"
     },
     {
-      src: "/lovable-uploads/dd275cdc-2e41-4551-b363-dff0677c2f48.png",
+      src: "/lovable-uploads/de55bc52-5796-47d5-b1d6-86add0e3f114.png",
       alt: "Estudiantes sonriendo en el aula"
     },
     {
-      src: "/lovable-uploads/588aa4c1-2219-4f49-acad-fddfc66671be.png",
+      src: "/lovable-uploads/8149309d-a321-4e36-8ab3-a8d8a07763c5.png",
       alt: "Comunidad educativa"
     }
   ];
@@ -52,7 +52,7 @@ const HeroCarousel = () => {
   const [api, setApi] = React.useState<CarouselApi>();
 
   const autoplayPlugin = React.useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: true })
+    Autoplay({ delay: 2000, stopOnInteraction: true })
   );
 
   return (

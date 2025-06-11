@@ -6,10 +6,35 @@ import { Menu, X } from 'lucide-react';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  // Precargar imágenes del logo
+  useEffect(() => {
+    const preloadImages = () => {
+      const img1 = new Image();
+      const img2 = new Image();
+      let loadedCount = 0;
+
+      const onImageLoad = () => {
+        loadedCount++;
+        if (loadedCount === 2) {
+          setImagesLoaded(true);
+        }
+      };
+
+      img1.onload = onImageLoad;
+      img2.onload = onImageLoad;
+      
+      img1.src = "/lovable-uploads/c737b4de-ce3f-41cb-aabe-cd947e40ca20.png";
+      img2.src = "/lovable-uploads/f747066b-5161-4334-86d4-0b5cbef9af39.png";
+    };
+
+    preloadImages();
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,11 +63,13 @@ const Navbar = () => {
           href="/"
           className="flex items-center gap-2 transition-transform duration-300 hover:scale-105"
         >
-          <img
-            src={scrolled ? "/lovable-uploads/c737b4de-ce3f-41cb-aabe-cd947e40ca20.png" : "/lovable-uploads/f747066b-5161-4334-86d4-0b5cbef9af39.png"}
-            alt="Natan Gesang"
-            className="h-20"
-          />
+          {imagesLoaded && (
+            <img
+              src={scrolled ? "/lovable-uploads/c737b4de-ce3f-41cb-aabe-cd947e40ca20.png" : "/lovable-uploads/f747066b-5161-4334-86d4-0b5cbef9af39.png"}
+              alt="Natan Gesang"
+              className="h-20 transition-opacity duration-300"
+            />
+          )}
         </a>
 
         {/* Desktop Navigation */}
@@ -85,7 +112,6 @@ const Navbar = () => {
         <div className="absolute top-[60%] left-[15%] w-12 h-12 bg-natan-purple/10"></div>
         <div className="absolute top-[40%] right-[5%] w-8 h-32 bg-natan-skyblue/10"></div>
         
-        {/* Líneas horizontales */}
         <div className="absolute bottom-[10%] right-[25%] w-24 h-1 bg-natan-blue/20"></div>
         <div className="absolute bottom-[8%] right-[25%] w-24 h-1 bg-natan-blue/20"></div>
         <div className="absolute bottom-[6%] right-[25%] w-24 h-1 bg-natan-blue/20"></div>

@@ -1,24 +1,29 @@
 import React, { useEffect, useRef } from 'react';
+
 const InstitucionalSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const modoGesangRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('opacity-100');
-          entry.target.classList.remove('opacity-0', 'translate-y-10', 'translate-x-10');
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('opacity-100');
+            entry.target.classList.remove('opacity-0', 'translate-y-10', 'translate-x-10');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
     if (sectionRef.current) observer.observe(sectionRef.current);
     if (contentRef.current) observer.observe(contentRef.current);
     if (imageRef.current) observer.observe(imageRef.current);
     if (modoGesangRef.current) observer.observe(modoGesangRef.current);
+
     return () => {
       if (sectionRef.current) observer.unobserve(sectionRef.current);
       if (contentRef.current) observer.unobserve(contentRef.current);
@@ -26,7 +31,9 @@ const InstitucionalSection = () => {
       if (modoGesangRef.current) observer.unobserve(modoGesangRef.current);
     };
   }, []);
-  return <section id="institucional" className="py-20 bg-gray-50">
+
+  return (
+    <section id="institucional" className="py-20 bg-gray-50">
       <div ref={sectionRef} className="container-section opacity-0 translate-y-10 transition-all duration-700">
         <div className="text-center mb-16">
           <h2 className="heading-2 text-gray-900 mb-4">Institucional</h2>
@@ -83,7 +90,7 @@ const InstitucionalSection = () => {
             <img src="/lovable-uploads/a9ef1105-42b3-48d6-bb76-49f998f8557a.png" alt="Comunidad Natan Gesang" className="w-full h-full object-cover" />
           </div>
           <div className="relative rounded-2xl overflow-hidden shadow-natan h-[300px]">
-            <img src="/lovable-uploads/bdbfbd9a-1fbf-40a7-a847-517e3d15f818.png" alt="Actividades Natan Gesang" className="w-full h-full object-cover" />
+            <img src="/lovable-uploads/46ccf6a7-a0bb-4789-b247-49901782c04d.png" alt="Actividades Natan Gesang" className="w-full h-full object-cover" />
           </div>
         </div>
 
@@ -117,6 +124,8 @@ const InstitucionalSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default InstitucionalSection;

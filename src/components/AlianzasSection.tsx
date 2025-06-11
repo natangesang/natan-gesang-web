@@ -35,7 +35,7 @@ const AlianzasSection = () => {
     },
     {
       name: "Microsoft",
-      logo: "/lovable-uploads/e6a7c204-f383-47cf-b51f-e7e42526f09c.png"
+      logo: "/lovable-uploads/13f0b9a4-85b2-48f6-9cb4-15b6534eb572.png"
     },
     {
       name: "LEGO",
