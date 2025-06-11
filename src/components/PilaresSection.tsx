@@ -125,23 +125,23 @@ const PilaresSection = () => {
       className="relative py-20 overflow-hidden"
       style={{ backgroundColor: '#005cb9ff' }}
     >
-      {/* Marco lateral izquierdo */}
+      {/* Marco lateral izquierdo - en margen superior */}
       <div 
-        className="absolute left-0 top-0 h-full w-32 md:w-48 lg:w-64 z-0"
+        className="absolute left-0 top-0 w-24 h-32 md:w-32 md:h-40 lg:w-40 lg:h-48 z-0"
         style={{
           backgroundImage: `url('/lovable-uploads/35729a08-1f67-4adf-86b7-b4d711376679.png')`,
-          backgroundSize: 'cover',
+          backgroundSize: 'contain',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
         }}
       />
       
-      {/* Marco lateral derecho */}
+      {/* Marco lateral derecho - en margen inferior */}
       <div 
-        className="absolute right-0 top-0 h-full w-32 md:w-48 lg:w-64 z-0"
+        className="absolute right-0 bottom-0 w-24 h-32 md:w-32 md:h-40 lg:w-40 lg:h-48 z-0"
         style={{
           backgroundImage: `url('/lovable-uploads/2b4572d6-4ad1-4730-832c-5afacb67e73d.png')`,
-          backgroundSize: 'cover',
+          backgroundSize: 'contain',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
         }}
