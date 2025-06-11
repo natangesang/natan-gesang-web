@@ -120,11 +120,37 @@ const PilaresSection = () => {
   ];
 
   return (
-    <section id="pilares" className="py-20 bg-white">
-      <div ref={sectionRef} className="container-section opacity-0 translate-y-10 transition-all duration-700">
+    <section 
+      id="pilares" 
+      className="relative py-20 overflow-hidden"
+      style={{ backgroundColor: '#005cb9ff' }}
+    >
+      {/* Marco lateral izquierdo */}
+      <div 
+        className="absolute left-0 top-0 h-full w-32 md:w-48 lg:w-64 z-0"
+        style={{
+          backgroundImage: `url('/lovable-uploads/35729a08-1f67-4adf-86b7-b4d711376679.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      />
+      
+      {/* Marco lateral derecho */}
+      <div 
+        className="absolute right-0 top-0 h-full w-32 md:w-48 lg:w-64 z-0"
+        style={{
+          backgroundImage: `url('/lovable-uploads/2b4572d6-4ad1-4730-832c-5afacb67e73d.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      />
+
+      <div ref={sectionRef} className="container-section opacity-0 translate-y-10 transition-all duration-700 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="heading-2 text-gray-900 mb-4">Nuestros Pilares</h2>
-          <p className="subtitle mx-auto">
+          <h2 className="heading-2 text-white mb-4">Nuestros Pilares</h2>
+          <p className="subtitle mx-auto text-white/90">
             Los fundamentos que sostienen nuestro modelo educativo y nos hacen únicos
           </p>
         </div>
@@ -134,16 +160,16 @@ const PilaresSection = () => {
             <div
               key={index}
               ref={el => pilaresRefs.current[index] = el}
-              className="opacity-0 translate-y-10 transition-all duration-700 glass-card p-8 flex flex-col items-center text-center"
+              className="opacity-0 translate-y-10 transition-all duration-700 glass-card p-8 flex flex-col items-center text-center bg-white/10 backdrop-blur-md border-white/20"
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div className="mb-6">{pilar.icon}</div>
-              <h3 className="text-xl font-heading font-semibold mb-3 text-gray-800">{pilar.title}</h3>
+              <h3 className="text-xl font-heading font-semibold mb-3 text-white">{pilar.title}</h3>
               
               <div className="w-full">
                 <button
                   onClick={() => toggleExpanded(index)}
-                  className="flex items-center justify-center w-full text-natan-blue hover:text-natan-skyblue transition-colors mb-3"
+                  className="flex items-center justify-center w-full text-natan-orange hover:text-natan-orange/80 transition-colors mb-3"
                 >
                   <span className="mr-2">Leer más</span>
                   {expandedPilar === index ? (
@@ -156,7 +182,7 @@ const PilaresSection = () => {
                 <div className={`overflow-hidden transition-all duration-300 ${
                   expandedPilar === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                 }`}>
-                  <p className="text-gray-600 text-sm leading-relaxed">{pilar.description}</p>
+                  <p className="text-white/80 text-sm leading-relaxed">{pilar.description}</p>
                 </div>
               </div>
             </div>
