@@ -97,13 +97,14 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation with solid blue background */}
+      {/* Mobile Navigation with completely solid background */}
       <div
         className={cn(
           'fixed inset-0 flex flex-col justify-center items-center space-y-8 p-4 transition-all duration-500 md:hidden z-40',
           'bg-natan-blue',
-          isOpen ? 'opacity-100 top-0' : 'opacity-0 top-[-100%] pointer-events-none'
+          isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         )}
+        style={{ backgroundColor: '#0057A5' }}
       >
         {/* Formas geométricas decorativas */}
         <div className="absolute top-[10%] left-[10%] w-12 h-24 bg-white/10 rounded-l-full"></div>
