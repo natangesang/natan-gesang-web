@@ -1,9 +1,12 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 
 const HeroCarousel = () => {
+  const [imagesLoaded, setImagesLoaded] = useState<{ [key: string]: boolean }>({});
+  const [api, setApi] = useState<CarouselApi>();
+
   const images = [
     {
       src: "/lovable-uploads/f7fedd64-c34e-49db-9d54-aea4e804a611.png",
@@ -43,17 +46,45 @@ const HeroCarousel = () => {
     }
   ];
 
+  // Preload images with intersection observer for better performance
+  useEffect(() => {
+    const preloadFirstImages = images.slice(0, 3);
+    
+    preloadFirstImages.forEach((image) => {
+      const img = new Image();
+      img.onload = () => {
+        setImagesLoaded(prev => ({ ...prev, [image.src]: true }));
+      };
+      img.src = image.src;
+    });
+
+    // Lazy load remaining images
+    const timer = setTimeout(() => {
+      images.slice(3).forEach((image) => {
+        const img = new Image();
+        img.onload = () => {
+          setImagesLoaded(prev => ({ ...prev, [image.src]: true }));
+        };
+        img.src = image.src;
+      });
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   // Agrupar las imágenes de 3 en 3
   const imageGroups = [];
   for (let i = 0; i < images.length; i += 3) {
     imageGroups.push(images.slice(i, i + 3));
   }
 
-  const [api, setApi] = React.useState<CarouselApi>();
-
   const autoplayPlugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
+    Autoplay({ delay: 3000, stopOnInteraction: true })
   );
+
+  const handleImageLoad = useCallback((src: string) => {
+    setImagesLoaded(prev => ({ ...prev, [src]: true }));
+  }, []);
 
   return (
     <div className="relative w-full max-w-5xl mx-auto">
@@ -75,10 +106,20 @@ const HeroCarousel = () => {
                 {group.map((image, imageIndex) => (
                   <div key={imageIndex} className="relative rounded-2xl overflow-hidden shadow-natan h-[280px]">
                     <div className="absolute inset-0 bg-gradient-to-t from-natan-blue/30 to-transparent z-10"></div>
+                    {!imagesLoaded[image.src] && (
+                      <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
+                        <div className="w-8 h-8 border-2 border-natan-blue border-t-transparent rounded-full animate-spin"></div>
+                      </div>
+                    )}
                     <img
                       src={image.src}
                       alt={image.alt}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      className={`w-full h-full object-cover hover:scale-105 transition-transform duration-300 ${
+                        imagesLoaded[image.src] ? 'opacity-100' : 'opacity-0'
+                      }`}
+                      loading={groupIndex === 0 ? "eager" : "lazy"}
+                      decoding="async"
+                      onLoad={() => handleImageLoad(image.src)}
                     />
                   </div>
                 ))}

@@ -15,22 +15,30 @@ const Navbar = () => {
   // Precargar imágenes del logo
   useEffect(() => {
     const preloadImages = () => {
-      const img1 = new Image();
-      const img2 = new Image();
-      let loadedCount = 0;
-
-      const onImageLoad = () => {
-        loadedCount++;
-        if (loadedCount === 2) {
-          setImagesLoaded(true);
-        }
-      };
-
-      img1.onload = onImageLoad;
-      img2.onload = onImageLoad;
+      const images = [
+        "/lovable-uploads/c737b4de-ce3f-41cb-aabe-cd947e40ca20.png",
+        "/lovable-uploads/f747066b-5161-4334-86d4-0b5cbef9af39.png"
+      ];
       
-      img1.src = "/lovable-uploads/c737b4de-ce3f-41cb-aabe-cd947e40ca20.png";
-      img2.src = "/lovable-uploads/f747066b-5161-4334-86d4-0b5cbef9af39.png";
+      let loadedCount = 0;
+      const totalImages = images.length;
+
+      images.forEach((src) => {
+        const img = new Image();
+        img.onload = () => {
+          loadedCount++;
+          if (loadedCount === totalImages) {
+            setImagesLoaded(true);
+          }
+        };
+        img.onerror = () => {
+          loadedCount++;
+          if (loadedCount === totalImages) {
+            setImagesLoaded(true);
+          }
+        };
+        img.src = src;
+      });
     };
 
     preloadImages();
@@ -51,6 +59,27 @@ const Navbar = () => {
     };
   }, []);
 
+  // Close menu when clicking outside or pressing escape
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   return (
     <header
       className={cn(
@@ -68,6 +97,8 @@ const Navbar = () => {
               src={scrolled ? "/lovable-uploads/c737b4de-ce3f-41cb-aabe-cd947e40ca20.png" : "/lovable-uploads/f747066b-5161-4334-86d4-0b5cbef9af39.png"}
               alt="Natan Gesang"
               className="h-20 transition-opacity duration-300"
+              loading="eager"
+              decoding="async"
             />
           )}
         </a>
@@ -97,14 +128,16 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation with completely solid background */}
+      {/* Mobile Navigation with completely opaque background */}
       <div
         className={cn(
           'fixed inset-0 flex flex-col justify-center items-center space-y-8 p-4 transition-all duration-500 md:hidden z-40',
-          'bg-natan-blue',
-          isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+          isOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
         )}
-        style={{ backgroundColor: '#0057A5' }}
+        style={{ 
+          backgroundColor: '#0057A5',
+          backdropFilter: 'none'
+        }}
       >
         {/* Formas geométricas decorativas */}
         <div className="absolute top-[10%] left-[10%] w-12 h-24 bg-white/10 rounded-l-full"></div>
