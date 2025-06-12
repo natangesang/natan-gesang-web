@@ -97,7 +97,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation with blue background */}
+      {/* Mobile Navigation with solid blue background */}
       <div
         className={cn(
           'fixed inset-0 flex flex-col justify-center items-center space-y-8 p-4 transition-all duration-500 md:hidden z-40',

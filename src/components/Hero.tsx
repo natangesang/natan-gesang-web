@@ -28,30 +28,13 @@ const Hero = () => {
     <section 
       id="inicio" 
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{ backgroundColor: '#005cb9ff' }}
+      style={{
+        backgroundImage: `url('/lovable-uploads/bc9b3ca0-e762-45dc-aa33-d3c3bcb6854d.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
     >
-      {/* Marco lateral izquierdo */}
-      <div 
-        className="absolute left-0 top-0 h-full w-32 md:w-48 lg:w-64 z-0"
-        style={{
-          backgroundImage: `url('/lovable-uploads/2b26748b-aa73-46e9-b676-ea998e84e233.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      />
-      
-      {/* Marco lateral derecho */}
-      <div 
-        className="absolute right-0 top-0 h-full w-32 md:w-48 lg:w-64 z-0"
-        style={{
-          backgroundImage: `url('/lovable-uploads/7a597d69-2926-4745-bd07-4eca1687e681.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      />
-
       <div ref={heroRef} className="container-section text-center text-white relative z-10 opacity-0 translate-y-10 transition-all duration-1000">
         <div className="max-w-6xl mx-auto px-[24px] py-[24px]">
           {/* Main Title Section */}
