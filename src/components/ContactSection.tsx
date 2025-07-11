@@ -30,7 +30,7 @@ const ContactSection = () => {
     try {
       const { supabase } = await import('@/integrations/supabase/client');
       
-      const { data: response, error } = await supabase.functions.invoke('send-contact-email', {
+      const { data: response, error } = await supabase.functions.invoke('send-email', {
         body: data
       });
 
