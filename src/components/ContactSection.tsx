@@ -28,8 +28,19 @@ const ContactSection = () => {
     console.log('Submitting contact form:', data);
     
     try {
-      // Simulate form submission (in a real app, this would be a Supabase call)
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const { supabase } = await import('@/integrations/supabase/client');
+      
+      const { data: response, error } = await supabase.functions.invoke('send-contact-email', {
+        body: data
+      });
+
+      if (error) {
+        throw new Error(error.message);
+      }
+
+      if (!response?.success) {
+        throw new Error(response?.error || 'Error al enviar el email');
+      }
       
       toast({
         title: "¡Mensaje enviado exitosamente!",
@@ -37,7 +48,7 @@ const ContactSection = () => {
       });
       
       form.reset();
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error submitting form:', error);
       toast({
         title: "Error al enviar el mensaje",
