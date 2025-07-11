@@ -30,15 +30,21 @@ const ContactSection = () => {
     try {
       const { supabase } = await import('@/integrations/supabase/client');
       
+      console.log('Invoking send-email function...');
       const { data: response, error } = await supabase.functions.invoke('send-email', {
         body: data
       });
 
+      console.log('Function response:', response);
+      console.log('Function error:', error);
+
       if (error) {
+        console.error('Supabase function error:', error);
         throw new Error(error.message);
       }
 
       if (!response?.success) {
+        console.error('Function returned error:', response);
         throw new Error(response?.error || 'Error al enviar el email');
       }
       
@@ -52,7 +58,7 @@ const ContactSection = () => {
       console.error('Error submitting form:', error);
       toast({
         title: "Error al enviar el mensaje",
-        description: "Por favor intenta nuevamente.",
+        description: `Error: ${error.message}. Por favor intenta nuevamente.`,
         variant: "destructive",
       });
     }
